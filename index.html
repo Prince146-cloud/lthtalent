@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#C67C1F" />
+  <meta name="theme-color" content="#174C64" />
   <meta name="description" content="LTH Talent connects employers with trained, career-ready talent from Loyal Training Hub." />
+  <meta name="image-credits" content="Illustrative gender-matched professional portraits sourced from Unsplash under the Unsplash License." />
   <title>LTH Talent — Connecting skills with opportunity</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
@@ -621,6 +622,389 @@
     @media(prefers-reduced-motion:reduce){.talent-spinner{animation:none}}
   </style>
 
+
+  <style id="lth-immersive-talent-redesign">
+    :root{--paper:#F0EEE7;--surface:#F8F6F0;--surface-2:#E9E6DC;--ink:#20343D;--muted:#5F7077;--orange:#C67C1F;--blue:#005580}
+    html{background:#E8E7E0}
+    body{background:transparent!important}
+    .hero{background:linear-gradient(105deg,rgba(244,242,234,.83),rgba(244,242,234,.62))!important}
+    .hero-grid>div:first-child{background:rgba(248,246,239,.84)!important;border:1px solid rgba(255,255,255,.78)!important;backdrop-filter:blur(18px) saturate(1.12);-webkit-backdrop-filter:blur(18px) saturate(1.12)}
+    .workspace-section{background:rgba(237,235,226,.58)!important}
+    .strip{background:rgba(247,245,237,.72)!important}
+    .panel,.candidate-card,.job-card,.profile-card,.live-feed-panel{background:rgba(248,247,241,.87)!important;border-color:rgba(255,255,255,.83)!important;backdrop-filter:blur(18px) saturate(1.1);-webkit-backdrop-filter:blur(18px) saturate(1.1)}
+    .candidate-card{border-radius:18px!important;box-shadow:0 12px 32px rgba(22,48,59,.07),inset 0 1px 0 rgba(255,255,255,.85)!important}
+    .portrait-frame{position:relative;display:block;overflow:hidden;isolation:isolate;background:linear-gradient(145deg,#0E6079,#D79A4D);padding:0!important}
+    .portrait-frame img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center 34%;transition:transform .75s cubic-bezier(.2,.75,.25,1),filter .5s}
+    .portrait-frame:hover img{transform:scale(1.045)}
+    .portrait-frame>span{display:none;position:absolute;inset:0;place-items:center;color:#fff;font:800 24px Manrope;background:linear-gradient(145deg,#0E6079,#C67C1F)}
+    .portrait-frame.portrait-fallback>span{display:grid}
+    .prominent-match-card{padding:clamp(18px,2vw,27px)!important;border-radius:24px!important;background:rgba(248,247,241,.92)!important;border:1px solid rgba(255,255,255,.9)!important;box-shadow:0 24px 65px rgba(21,49,59,.13),inset 0 1px 0 #fff!important;overflow:hidden;position:relative}
+    .prominent-match-card:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#C67C1F 0%,#E8B66E 43%,#005580 100%)}
+    .prominent-profile-head{grid-template-columns:clamp(112px,15vw,168px) minmax(0,1fr) 112px;gap:22px;align-items:center}
+    .prominent-avatar{width:100%;height:clamp(142px,17vw,190px);border-radius:19px!important;border:4px solid rgba(255,255,255,.92)!important;box-shadow:0 16px 34px rgba(24,54,66,.17)!important}
+    .prominent-avatar img{object-position:center 30%}
+    .prominent-identity h3{font-size:clamp(23px,2.5vw,32px)!important;line-height:1.12!important;margin:0 0 9px!important}
+    .prominent-identity>p{font-size:13px!important;line-height:1.5!important}
+    .profile-overline{font-size:9px!important;letter-spacing:1.35px!important}
+    .top-match-meta{font-size:11px!important;gap:9px 16px!important}
+    .prominent-fit{min-height:116px!important;border-radius:18px!important;background:linear-gradient(155deg,rgba(0,85,128,.09),rgba(198,124,31,.08))!important}
+    .prominent-fit strong{font-size:35px!important}
+    .prominent-fit span{font-size:9px!important}
+    .prominent-profile-body{gap:28px!important;margin-top:27px!important;padding-top:22px!important}
+    .prominent-about>p{font-size:13px!important;line-height:1.78!important}
+    .prominent-facts{grid-template-columns:1fr 1fr;gap:10px 18px!important}
+    .prominent-facts span{font-size:11px!important;line-height:1.5}
+    .prominent-facts b{display:block!important;margin-bottom:2px;min-width:0!important;font-size:9px!important;letter-spacing:.5px;text-transform:uppercase}
+    .prominent-skills .top-match-skills{gap:8px!important}
+    .top-match-skill{padding:8px 11px!important;font-size:10px!important;border-radius:9px!important}
+    .top-match-explain{font-size:11px!important;line-height:1.65!important}
+    .prominent-match-breakdown{gap:19px!important;margin-top:24px!important;padding:17px 0!important}
+    .prominent-match-breakdown span{font-size:10px!important}.prominent-match-breakdown b{font-size:10px!important}
+    .fit-track{height:6px!important}
+    .prominent-actions{gap:10px!important;margin-top:21px!important}
+    .prominent-actions .btn{min-height:46px!important;padding:11px 17px!important;font-size:11px!important;border-radius:12px!important}
+    .candidate-main{align-items:center!important}
+    .candidate-avatar{width:62px!important;height:66px!important;border-radius:14px!important}
+    .candidate-card .candidate-name{font-size:14px!important}
+    .candidate-list{gap:12px!important}
+    .tiny-avatar{position:relative;overflow:hidden;flex:0 0 30px;height:30px;border-radius:9px!important;padding:0!important}
+    .tiny-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .tiny-avatar>span{font-size:8px!important}
+    .detail-avatar{position:relative;overflow:hidden;padding:0!important}
+    .detail-avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .hero-person-photo{overflow:hidden;padding:0!important;background:#ddd!important}
+    .hero-person-photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .talent-search-status{padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;margin-bottom:17px!important;overflow:visible!important}
+    .talent-search-stage{--stage-photo:none;position:relative;isolation:isolate;min-height:352px;overflow:hidden;border-radius:23px;border:1px solid rgba(255,255,255,.88);background:#193B4A;box-shadow:0 22px 58px rgba(25,50,58,.17),inset 0 1px 0 rgba(255,255,255,.24)}
+    .search-stage-image{position:absolute;z-index:-2;inset:-16px;background-size:cover;background-position:center 28%;filter:blur(15px) saturate(.92);transform:scale(1.11);opacity:0;transition:opacity .65s ease,transform 1.2s ease;will-change:opacity,background-image}.search-stage-image.is-active{opacity:.96;transform:scale(1.07)}.search-stage-image.is-settled{opacity:.9}
+    .search-stage-overlay{position:absolute;z-index:-1;inset:0;background:linear-gradient(112deg,rgba(8,43,60,.89),rgba(0,75,99,.68) 54%,rgba(24,43,45,.48)),linear-gradient(0deg,rgba(8,31,42,.5),transparent 65%)}
+    .search-stage-content{min-height:352px;display:flex;flex-direction:column;justify-content:space-between;padding:24px 28px 21px;color:#fff}
+    .search-stage-top{display:flex;justify-content:space-between;align-items:center;gap:15px}
+    .search-stage-brand{display:flex;align-items:center;gap:9px;font-size:9px;font-weight:800;letter-spacing:1.65px;color:rgba(255,255,255,.92)}
+    .search-stage-brand i{width:8px;height:8px;border-radius:50%;background:#E8AD5D;box-shadow:0 0 0 5px rgba(232,173,93,.17)}
+    .search-stage-live{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.10);backdrop-filter:blur(12px);padding:7px 10px;border-radius:999px;font-size:8px;font-weight:800;letter-spacing:1.1px;color:#fff}
+    .search-stage-center{width:min(590px,100%);margin:0 auto;text-align:center;padding:13px 0 8px}
+    .search-stage-spinner{width:47px;height:47px;margin:0 auto 14px;display:grid;grid-template-columns:repeat(3,5px);align-content:center;justify-content:center;gap:5px;border:1px solid rgba(255,255,255,.42);border-radius:50%;background:rgba(255,255,255,.10);backdrop-filter:blur(12px)}
+    .search-stage-spinner span{width:5px;height:5px;border-radius:50%;background:#F3C17D;animation:stage-pulse 1.15s ease-in-out infinite}
+    .search-stage-spinner span:nth-child(2){animation-delay:.14s}.search-stage-spinner span:nth-child(3){animation-delay:.28s}
+    .search-stage-kicker{margin:0 0 8px;color:#F2C78E;font-size:9px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}
+    .search-stage-center h3{margin:0;color:#fff;font:700 clamp(22px,3vw,31px) Manrope;letter-spacing:-.85px}
+    .search-stage-query{margin:8px 0 24px;color:rgba(255,255,255,.78);font-size:12px}.search-stage-query strong{color:#fff;font-weight:700}
+    .search-progress-track{height:7px;width:100%;max-width:520px;margin:0 auto;border-radius:999px;background:rgba(255,255,255,.23);overflow:hidden;box-shadow:inset 0 1px 3px rgba(0,0,0,.14)}
+    .search-progress-track i{display:block;width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,#C67C1F,#F4C47E 55%,#fff1d8);box-shadow:0 0 18px rgba(244,196,126,.35);animation:lth-search-fill 5s linear forwards}
+    .search-progress-meta{max-width:520px;margin:10px auto 0;display:flex;align-items:center;justify-content:space-between;gap:10px;color:rgba(255,255,255,.76);font-size:10px}
+    .search-progress-meta strong{color:#F4D7AD;font-size:9px;letter-spacing:.6px;text-transform:uppercase}
+    .search-stage-foot{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;color:rgba(255,255,255,.7);font-size:8px;font-weight:800;letter-spacing:1.7px}
+    .search-stage-foot b{color:#E9AD60;font-size:12px}
+    .talent-search-resultline{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid rgba(0,85,128,.13);border-radius:14px;background:rgba(248,247,241,.91);box-shadow:0 7px 22px rgba(25,50,58,.06);color:#20343D}
+    .talent-search-resultline>span:nth-child(2){flex:1;min-width:0}.talent-search-resultline strong{display:block;font:800 11px Manrope;color:#174C64}.talent-search-resultline small{display:block;margin-top:3px;color:#68787C;font-size:10px;line-height:1.45}
+    .search-result-check{width:27px;height:27px;flex:0 0 27px;border-radius:50%;display:grid;place-items:center;background:#E7F3EA;color:#26734D;font-weight:900}
+    .search-result-time{color:#A36A23;font-size:8px;font-weight:900;letter-spacing:1px;white-space:nowrap}
+    .talent-search-none{padding:14px 16px;border:1px solid rgba(0,85,128,.13);border-radius:14px;background:rgba(248,247,241,.92)}
+    @keyframes lth-search-fill{from{width:0}to{width:100%}}
+    @keyframes stage-pulse{0%,80%,100%{opacity:.35;transform:scale(.72)}40%{opacity:1;transform:scale(1.16)}}
+    @keyframes stage-image-in{from{opacity:.3;transform:scale(1.13)}to{opacity:.95;transform:scale(1.09)}}
+    @media(max-width:900px){.prominent-profile-head{grid-template-columns:126px minmax(0,1fr) 100px!important;gap:16px!important}.prominent-avatar{height:150px!important}}
+    @media(max-width:760px){.prominent-profile-head{grid-template-columns:94px minmax(0,1fr)!important;gap:13px!important}.prominent-avatar{width:94px!important;height:118px!important;border-radius:16px!important}.prominent-fit{grid-column:1/-1;display:flex;flex-direction:row;gap:9px;justify-content:flex-start;align-items:center;min-height:auto!important;padding:10px 13px!important}.prominent-fit strong{font-size:23px!important}.prominent-fit span{margin:0!important}.prominent-fit small{margin:0!important}.prominent-profile-body{grid-template-columns:1fr!important;gap:17px!important}.prominent-facts{grid-template-columns:1fr 1fr!important}.prominent-match-breakdown{grid-template-columns:1fr!important;gap:12px!important}.prominent-actions{display:grid!important;grid-template-columns:1fr!important}.prominent-actions .btn{width:100%!important}.search-stage-content{padding:20px 17px 17px;min-height:330px}.talent-search-stage{min-height:330px}.search-stage-center h3{font-size:23px}.search-stage-foot{gap:7px;font-size:7px;letter-spacing:1px}.search-progress-meta{font-size:9px}.search-result-time{display:none}.candidate-avatar{width:55px!important;height:60px!important}.detail-hero{grid-template-columns:62px minmax(0,1fr)}.detail-avatar{width:62px;height:62px}}
+    @media(max-width:420px){.prominent-profile-head{grid-template-columns:78px minmax(0,1fr)!important;gap:10px!important}.prominent-avatar{width:78px!important;height:100px!important}.prominent-identity h3{font-size:20px!important}.prominent-identity>p{font-size:11px!important}.top-match-meta{font-size:9px!important}.search-stage-content{padding:17px 13px 15px}.search-stage-top{gap:8px}.search-stage-brand{font-size:8px;letter-spacing:1px}.search-stage-live{font-size:7px;padding:6px 8px}.search-stage-center h3{font-size:21px}.search-stage-query{font-size:10px}.search-progress-meta strong{font-size:8px}}
+    @media(prefers-reduced-motion:reduce){.search-stage-spinner span{animation:none!important}.search-progress-track i{animation:none!important;width:100%!important}.search-stage-image{transition:none!important}}
+  </style>
+
+
+  <style id="lth-portrait-disclosure">
+    .prominent-avatar:after,.detail-avatar:after{content:"ILLUSTRATIVE PORTRAIT";position:absolute;left:7px;right:7px;bottom:7px;padding:5px 4px;border-radius:6px;background:rgba(14,42,53,.72);color:rgba(255,255,255,.96);font:800 7px "DM Sans",sans-serif;letter-spacing:.75px;text-align:center;backdrop-filter:blur(8px)}
+  </style>
+
+  <style id="lth-billion-dollar-search">
+    .lth-searchbox{
+      display:flex!important;align-items:center!important;gap:8px!important;min-width:0;
+      padding:5px!important;border-radius:16px!important;border:1px solid rgba(0,85,128,.18)!important;
+      background:rgba(255,255,255,.78)!important;box-shadow:0 12px 32px rgba(19,56,72,.08),inset 0 1px 0 #fff!important;
+      -webkit-backdrop-filter:blur(18px) saturate(1.25);backdrop-filter:blur(18px) saturate(1.25);
+      transition:border-color .3s ease,box-shadow .3s ease,transform .3s ease;
+    }
+    .lth-searchbox:focus-within{border-color:rgba(198,124,31,.62)!important;box-shadow:0 0 0 4px rgba(198,124,31,.10),0 16px 38px rgba(19,56,72,.11)!important;transform:translateY(-1px)}
+    .lth-searchbox>span{position:absolute!important;left:18px!important;top:50%!important;transform:translateY(-50%)!important;z-index:2!important;color:#A16B2B!important;font-size:20px!important;pointer-events:none}
+    .lth-searchbox input{flex:1 1 auto!important;min-width:0!important;width:100%!important;min-height:47px!important;padding:10px 12px 10px 42px!important;border:0!important;border-radius:11px!important;background:transparent!important;box-shadow:none!important;color:#20343D!important;font-size:12px!important;outline:none!important}
+    .lth-searchbox input:focus{border:0!important;box-shadow:none!important;background:transparent!important}
+    .lth-searchbox input::placeholder{color:#819097!important;opacity:1}
+    .lth-searchbox input[readonly]{opacity:.78;cursor:wait}
+    .lth-searchbox button{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:45px;padding:0 20px;border:1px solid rgba(255,255,255,.42);border-radius:12px;color:#fff;background:linear-gradient(135deg,#B96F18,#D99336 62%,#E8AC5C);box-shadow:0 7px 18px rgba(198,124,31,.23),inset 0 1px 0 rgba(255,255,255,.28);font:800 11px Manrope;letter-spacing:.15px;transition:transform .3s ease,box-shadow .3s ease,filter .3s ease}
+    .lth-searchbox button:hover{transform:translateY(-2px);filter:saturate(1.08);box-shadow:0 11px 24px rgba(198,124,31,.29),inset 0 1px 0 rgba(255,255,255,.35)}
+    .lth-searchbox button:disabled{opacity:.78;cursor:wait;transform:none}
+    .lth-searchbox button b{font-size:15px;font-weight:600}
+    .lth-search-button-spinner{width:14px;height:14px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:lth-button-spin .65s linear infinite}
+    @keyframes lth-button-spin{to{transform:rotate(360deg)}}
+    .talent-search-stage{min-height:385px!important;border-radius:25px!important;border-color:rgba(255,255,255,.50)!important;background:#0B3D55!important;box-shadow:0 28px 75px rgba(12,48,65,.24),inset 0 1px 0 rgba(255,255,255,.24)!important;overflow:hidden}
+    .search-stage-image{inset:-23px!important;background-size:cover!important;background-position:center 28%!important;filter:blur(20px) saturate(1.08) brightness(.76)!important;transform:scale(1.16)!important;opacity:0!important;transition:opacity .9s cubic-bezier(.2,.75,.25,1),transform 1.4s cubic-bezier(.2,.75,.25,1)!important;will-change:opacity,background-image}
+    .search-stage-image.is-active{opacity:.88!important;transform:scale(1.075)!important}
+    .search-stage-overlay,.search-stage-vignette{position:absolute;z-index:-1;inset:0;pointer-events:none}
+    .search-stage-overlay{background:linear-gradient(105deg,rgba(5,39,56,.82),rgba(0,66,91,.57) 55%,rgba(22,43,48,.43)),linear-gradient(0deg,rgba(5,30,42,.58),rgba(4,32,47,.12) 75%)!important}
+    .search-stage-vignette{z-index:-1;background:linear-gradient(105deg,rgba(5,35,51,.82),rgba(0,63,88,.56) 54%,rgba(18,39,45,.48)),radial-gradient(ellipse at 50% 48%,transparent 10%,rgba(4,24,35,.28) 100%),linear-gradient(90deg,rgba(198,124,31,.08),transparent 38%,rgba(0,85,128,.10));}
+    .talent-search-stage:after{content:"";position:absolute;z-index:0;left:-25%;right:-25%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(247,206,145,.0),rgba(247,206,145,.65),rgba(255,255,255,.3),transparent);box-shadow:0 0 24px rgba(242,190,119,.25);animation:lth-search-scanline 3.6s ease-in-out infinite;pointer-events:none}
+    @keyframes lth-search-scanline{0%{transform:translateY(0);opacity:0}12%{opacity:.8}88%{opacity:.75}100%{transform:translateY(385px);opacity:0}}
+    .search-stage-content{position:relative;z-index:1;min-height:385px!important;padding:25px 30px 20px!important}
+    .search-stage-brand{font-size:9px!important;letter-spacing:1.8px!important}
+    .search-stage-brand i{background:#E6A34F!important;box-shadow:0 0 0 5px rgba(230,163,79,.15),0 0 18px rgba(230,163,79,.35)!important}
+    .search-stage-live{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.28)!important;background:rgba(255,255,255,.10)!important;padding:8px 12px!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+    .search-stage-live i{width:6px;height:6px;border-radius:50%;background:#79D7AE;box-shadow:0 0 0 4px rgba(121,215,174,.13)}
+    .search-stage-center{padding:12px 0!important;max-width:630px!important}
+    .search-stage-orbit{width:58px;height:58px;position:relative;margin:0 auto 16px;border:1px solid rgba(255,255,255,.34);border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.09);box-shadow:0 0 0 9px rgba(255,255,255,.035),0 0 34px rgba(229,166,88,.13);backdrop-filter:blur(12px)}
+    .search-stage-orbit:before,.search-stage-orbit:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(243,194,127,.34)}
+    .search-stage-orbit:before{inset:7px;border-top-color:#F1BD73;border-right-color:transparent;animation:lth-orbit-spin 2.8s linear infinite}
+    .search-stage-orbit:after{inset:-5px;border-left-color:rgba(255,255,255,.6);border-bottom-color:transparent;animation:lth-orbit-spin 4.2s linear infinite reverse}
+    .search-stage-orbit span{width:7px;height:7px;border-radius:50%;background:#F4C786;box-shadow:0 0 16px #F4C786}
+    .search-stage-orbit i{position:absolute;width:3px;height:3px;right:2px;top:13px;border-radius:50%;background:#fff;box-shadow:0 0 9px #fff}
+    @keyframes lth-orbit-spin{to{transform:rotate(360deg)}}
+    .search-stage-kicker{font-size:8px!important;letter-spacing:2.1px!important;color:#F2C78E!important;margin-bottom:10px!important}
+    .search-stage-center h3{font-size:clamp(24px,3vw,34px)!important;letter-spacing:-1.05px!important;text-shadow:0 3px 20px rgba(0,0,0,.16)}
+    .search-stage-query{font-size:12px!important;margin:10px 0 23px!important;color:rgba(255,255,255,.82)!important}
+    .search-stage-query strong{color:#FFE2B5!important}
+    .search-progress-track{height:8px!important;max-width:570px!important;background:rgba(255,255,255,.20)!important;border:1px solid rgba(255,255,255,.15);box-shadow:inset 0 2px 4px rgba(0,0,0,.19)!important}
+    .search-progress-track i{background:linear-gradient(90deg,#B96F18,#E8A54F 56%,#FFE0AE)!important;box-shadow:0 0 20px rgba(238,180,104,.45)!important}
+    .search-progress-meta{max-width:570px!important;margin-top:12px!important;font-size:10px!important}
+    .search-progress-meta strong{display:flex;align-items:baseline;gap:5px;color:#FFE0AD!important;font:800 17px Manrope!important;letter-spacing:.2px!important}
+    .search-progress-meta strong small{font-size:7px;letter-spacing:1px}
+    .search-stage-foot{gap:clamp(10px,2.4vw,24px)!important;font-size:8px!important;letter-spacing:1.1px!important;color:rgba(255,255,255,.78)!important}
+    .search-stage-foot span{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border:1px solid rgba(255,255,255,.13);border-radius:999px;background:rgba(255,255,255,.07);backdrop-filter:blur(9px)}
+    .search-stage-foot b{color:#EAB66F!important;font-size:8px!important}
+    .talent-search-resultline{border-radius:15px!important;border-color:rgba(0,85,128,.13)!important;background:rgba(249,247,240,.93)!important;box-shadow:0 10px 28px rgba(22,48,61,.08)!important}
+    @media(max-width:760px){.lth-searchbox{width:100%;gap:4px!important}.lth-searchbox input{font-size:11px!important;padding-left:37px!important}.lth-searchbox button{padding:0 13px;font-size:10px}.search-stage-content{min-height:350px!important;padding:19px 16px 16px!important}.talent-search-stage{min-height:350px!important}.search-stage-foot{gap:5px!important}.search-stage-foot span{padding:6px 7px;font-size:7px}.search-stage-center h3{font-size:24px!important}.search-progress-meta strong{font-size:14px!important}}
+    @media(max-width:420px){.lth-searchbox button{padding:0 10px}.lth-searchbox input{font-size:10px!important}.search-stage-content{padding:16px 12px 13px!important}.search-stage-brand{font-size:7px!important;letter-spacing:1.2px!important}.search-stage-live{font-size:7px!important;padding:6px 8px!important}.search-stage-foot span{padding:5px 6px;gap:4px;font-size:6px}.search-stage-center h3{font-size:21px!important}}
+    @media(prefers-reduced-motion:reduce){.talent-search-stage:after,.search-stage-orbit:before,.search-stage-orbit:after{animation:none!important}.search-stage-image{transition:none!important}}
+  </style>
+
+  <style id="lth-photo-liquid-glass-search">
+    /* Search input: translucent warm glass that still reads comfortably. */
+    .lth-searchbox{
+      background:linear-gradient(135deg,rgba(255,255,255,.66),rgba(247,242,232,.43))!important;
+      border:1px solid rgba(255,255,255,.82)!important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.92),inset 0 -1px 0 rgba(255,255,255,.24),0 15px 38px rgba(23,53,67,.10)!important;
+      -webkit-backdrop-filter:blur(25px) saturate(1.45)!important;
+      backdrop-filter:blur(25px) saturate(1.45)!important;
+    }
+    .lth-searchbox:focus-within{
+      background:linear-gradient(135deg,rgba(255,255,255,.76),rgba(250,243,229,.53))!important;
+      border-color:rgba(198,124,31,.52)!important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.96),0 0 0 4px rgba(198,124,31,.09),0 18px 42px rgba(23,53,67,.13)!important;
+    }
+    .lth-searchbox input{color:#263840!important}
+    .lth-searchbox button{
+      background:linear-gradient(135deg,rgba(185,111,24,.94),rgba(217,147,54,.90) 62%,rgba(232,172,92,.88))!important;
+      border:1px solid rgba(255,255,255,.52)!important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.34),0 7px 20px rgba(151,91,25,.20)!important;
+      -webkit-backdrop-filter:blur(12px) saturate(1.2);
+      backdrop-filter:blur(12px) saturate(1.2);
+    }
+
+    /* The five-second search becomes a true photo-backed glass surface. */
+    .talent-search-stage{
+      isolation:isolate!important;
+      background:linear-gradient(135deg,rgba(15,58,76,.17),rgba(10,44,61,.12))!important;
+      border:1px solid rgba(255,255,255,.48)!important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.42),inset 0 -1px 0 rgba(255,255,255,.12),0 28px 75px rgba(12,48,65,.18)!important;
+      -webkit-backdrop-filter:blur(5px) saturate(1.16)!important;
+      backdrop-filter:blur(5px) saturate(1.16)!important;
+    }
+    .search-stage-image{
+      filter:blur(12px) saturate(1.12) brightness(.86)!important;
+      transform:scale(1.13)!important;
+      transition:opacity .95s cubic-bezier(.2,.75,.25,1),transform 1.35s cubic-bezier(.2,.75,.25,1)!important;
+    }
+    .search-stage-image.is-active{
+      opacity:.76!important;
+      transform:scale(1.075)!important;
+    }
+    .search-stage-vignette{
+      background:
+        linear-gradient(105deg,rgba(5,35,51,.34),rgba(0,63,88,.19) 54%,rgba(18,39,45,.16)),
+        radial-gradient(ellipse at 50% 48%,transparent 8%,rgba(4,24,35,.15) 100%),
+        linear-gradient(90deg,rgba(198,124,31,.055),transparent 38%,rgba(0,85,128,.06))!important;
+    }
+    .search-stage-center{
+      max-width:690px!important;
+      padding:25px 30px 23px!important;
+      border:1px solid rgba(255,255,255,.31);
+      border-radius:23px;
+      background:linear-gradient(135deg,rgba(255,255,255,.19),rgba(255,255,255,.075))!important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.27),inset 0 -1px 0 rgba(255,255,255,.08),0 18px 48px rgba(3,25,37,.10)!important;
+      -webkit-backdrop-filter:blur(21px) saturate(1.25)!important;
+      backdrop-filter:blur(21px) saturate(1.25)!important;
+    }
+    .search-stage-top{
+      padding:9px 13px!important;
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:999px;
+      background:rgba(255,255,255,.085);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.13);
+      -webkit-backdrop-filter:blur(14px);
+      backdrop-filter:blur(14px);
+    }
+    .search-stage-live{background:rgba(255,255,255,.14)!important;border-color:rgba(255,255,255,.30)!important}
+    .search-progress-track{
+      background:rgba(255,255,255,.24)!important;
+      border:1px solid rgba(255,255,255,.26)!important;
+      box-shadow:inset 0 2px 5px rgba(3,25,37,.16),0 1px 0 rgba(255,255,255,.12)!important;
+    }
+    .search-stage-foot{
+      padding:9px 13px;
+      border:1px solid rgba(255,255,255,.17);
+      border-radius:999px;
+      background:rgba(255,255,255,.075);
+      -webkit-backdrop-filter:blur(13px);
+      backdrop-filter:blur(13px);
+    }
+    @media(max-width:760px){
+      .search-stage-center{padding:21px 16px 19px!important;border-radius:18px}
+      .search-stage-top{border-radius:15px;padding:8px 10px!important}
+      .search-stage-foot{border-radius:14px}
+      .search-stage-image{filter:blur(10px) saturate(1.1) brightness(.84)!important}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .search-stage-image{transition:none!important}
+      .search-stage-top,.search-stage-center,.search-stage-foot{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+    }
+  </style>
+
+  <style id="lth-60-30-10-design-system">
+    /* LTH visual balance: 60% warm neutrals, 30% ocean blue, 10% LTH orange. */
+    :root{
+      --orange:#C67C1F;
+      --orange-deep:#A96516;
+      --orange-soft:#F4E7D4;
+      --blue:#174C64;
+      --blue-deep:#123D53;
+      --blue-mid:#2F687D;
+      --blue-soft:#DCE7E8;
+      --warm-canvas:#E9E6DE;
+      --warm-surface:#F1EFE8;
+      --warm-glass:rgba(241,239,232,.78);
+      --warm-glass-strong:rgba(241,239,232,.92);
+      --ink:#25363D;
+      --muted:#687980;
+      --line:rgba(23,76,100,.14);
+    }
+    html,body{background:#E9E6DE!important;color:#25363D!important}
+    body{background-image:linear-gradient(145deg,rgba(245,243,236,.92),rgba(228,230,222,.88))!important}
+    .ambient-backdrop{
+      filter:saturate(.62) brightness(.83)!important;
+    }
+    /* Keep the header calm and blue-led, without a bright white strip. */
+    .topbar{background:rgba(233,230,222,.80)!important;border-bottom:1px solid rgba(23,76,100,.12)!important;backdrop-filter:blur(20px) saturate(1.12)!important}
+    .topbar .nav{background:rgba(241,239,232,.82)!important;border:1px solid rgba(255,255,255,.72)!important;box-shadow:0 12px 32px rgba(20,52,65,.09),inset 0 1px 0 rgba(255,255,255,.86)!important}
+    .brand-mark{background:linear-gradient(145deg,#245F76,#17465E)!important;box-shadow:0 5px 14px rgba(23,76,100,.18)!important}
+    .brand-copy strong,.brand-copy small{color:var(--blue)!important}
+    .brand-copy strong span{color:var(--orange)!important}
+    .navlinks,.navlinks a{color:#49616B!important}
+    .navlinks a:hover{color:var(--blue)!important}
+    .nav-right .btn-primary{background:var(--blue)!important;border-color:var(--blue)!important;box-shadow:0 7px 18px rgba(23,76,100,.18)!important}
+    .nav-right .btn-primary:hover{background:var(--blue-deep)!important}
+
+    /* Warm neutral canvas is the dominant 60%. Blue carries hierarchy. */
+    .hero{background:linear-gradient(110deg,rgba(236,233,224,.89),rgba(225,229,224,.78))!important}
+    .hero-grid>div:first-child{background:rgba(241,239,232,.76)!important;border-color:rgba(255,255,255,.78)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.88),0 18px 46px rgba(24,55,67,.10)!important}
+    .hero h1,.section-top h2,.center h2,.panel-heading,.role-title,.match-card-head strong,.person-info strong,.candidate-name,.candidate-title,.profile-card h3,.job-card h4{color:var(--blue-deep)!important}
+    .hero h1 span{color:var(--orange)!important}
+    .hero-copy,.section-top p,.center p{color:#536970!important}
+    .hero-proof,.hero-proof strong{color:#536970!important}
+    .eyebrow{color:var(--blue)!important;background:rgba(220,231,232,.78)!important;border-color:rgba(23,76,100,.13)!important}
+    .section-kicker,.profile-overline{color:#6A7E83!important}
+    .orbit{border-color:rgba(23,76,100,.16)!important}
+    .orbit:before{background:var(--blue-mid)!important;box-shadow:0 0 0 7px rgba(23,76,100,.08)!important}
+    .orbit:after{background:var(--orange)!important;box-shadow:0 0 0 6px rgba(198,124,31,.10)!important}
+    .match-card,.panel,.candidate-card,.job-card,.step,.top-match-card,.filter-panel,.insight-panel,.shortlist-box,.interview-activity-box,.profile-card,.live-feed-panel{
+      color:var(--ink)!important;
+      background:rgba(241,239,232,.84)!important;
+      border:1px solid rgba(255,255,255,.72)!important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.84),0 14px 34px rgba(23,54,66,.09)!important;
+      -webkit-backdrop-filter:blur(19px) saturate(1.04)!important;
+      backdrop-filter:blur(19px) saturate(1.04)!important;
+    }
+    .filter-panel,.insight-panel{background:rgba(220,229,227,.82)!important}
+    .candidate-card,.job-card,.step{background:rgba(244,242,235,.88)!important}
+    .candidate-card:hover,.job-card:hover,.step:hover{background:rgba(248,247,241,.95)!important;border-color:rgba(23,76,100,.24)!important;box-shadow:0 15px 35px rgba(23,54,66,.12)!important}
+    .strip,.skill-areas span,.role-switch{background:rgba(220,229,227,.64)!important;border-color:rgba(23,76,100,.12)!important}
+    .workspace-section,.how-section{background:rgba(210,218,214,.52)!important}
+    .filter-group select,.filter-group input[type=text],.sort-select,.searchbox,.field input,.field select,.field textarea{
+      background:rgba(245,243,236,.96)!important;color:var(--ink)!important;border-color:rgba(23,76,100,.17)!important
+    }
+    .filter-group select:focus,.filter-group input:focus,.sort-select:focus,.searchbox:focus-within,.field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(23,76,100,.48)!important;box-shadow:0 0 0 3px rgba(23,76,100,.08)!important}
+    .filter-group input[type=checkbox]{accent-color:var(--blue)!important}
+    .searchbox input,.lth-searchbox input{color:var(--ink)!important}
+    .searchbox input::placeholder,.lth-searchbox input::placeholder,.field input::placeholder,.field textarea::placeholder{color:#7C8988!important}
+    .match-card-head strong,.role-title,.person-info strong,.panel-heading,.candidate-name,.candidate-title,.profile-card h3,.job-card h4{color:var(--blue-deep)!important}
+    .section-top p,.center p,.candidate-meta,.company,.job-details,.job-card p,.shortlist-empty,.insight-sub,.insight-stat span,.result-count,.match-copy{color:#5D6F73!important}
+    .match-reason span,.top-match-skill{background:rgba(220,231,232,.72)!important;border-color:rgba(23,76,100,.11)!important;color:#365E6D!important}
+    .top-match-skill.is-match{background:rgba(198,124,31,.10)!important;border-color:rgba(198,124,31,.19)!important;color:#895A20!important}
+    .prominent-profile-head,.prominent-profile-body,.prominent-match-breakdown{border-color:rgba(23,76,100,.14)!important}
+    .prominent-fit{background:rgba(220,231,232,.58)!important;border-color:rgba(23,76,100,.15)!important}
+    .prominent-fit span,.prominent-facts b,.prominent-match-breakdown span,.prominent-match-breakdown b{color:var(--blue)!important}
+    .prominent-fit strong{color:#267451!important}
+    .prominent-avatar,.detail-avatar{background:linear-gradient(145deg,#2C6D83,#17465E)!important;box-shadow:0 8px 20px rgba(23,76,100,.17)!important}
+    .prominent-avatar.a2,.detail-avatar.a2{background:linear-gradient(145deg,#527F8C,#2B5A6D)!important}
+    .prominent-avatar.a3,.detail-avatar.a3{background:linear-gradient(145deg,#6D9188,#456B65)!important}
+    .prominent-avatar.a4,.detail-avatar.a4{background:linear-gradient(145deg,#768C9A,#526D7C)!important}
+    .candidate-avatar{background:linear-gradient(145deg,#2D6A80,#17465E)!important}
+    .shortlist-mini,.shortlist-remove{background:rgba(220,231,232,.72)!important;border-color:rgba(23,76,100,.15)!important;color:var(--blue)!important}
+    .shortlist-mini.interview-mini{background:rgba(23,76,100,.09)!important;border-color:rgba(23,76,100,.18)!important;color:var(--blue)!important}
+    .btn-shortlisted{background:#E2EBE7!important;color:#2E6953!important;border-color:#C8D9D0!important}
+
+    /* Blue is the secondary 30%: quiet structural actions and strong hierarchy. */
+    .btn-dark,.role-switch button.active,.btn-light:hover,.btn-quiet:hover,.icon-btn:hover,.icon-btn.saved{background:var(--blue)!important;border-color:var(--blue)!important;color:#fff!important}
+    .btn-dark:hover,.role-switch button.active:hover{background:var(--blue-deep)!important}
+    .btn-light,.btn-quiet,.icon-btn{color:var(--blue)!important;background:rgba(241,239,232,.82)!important;border-color:rgba(23,76,100,.18)!important}
+    .role-switch button{color:#506872!important}
+    .cta-band{background:linear-gradient(115deg,#174C64,#235D72)!important;color:#fff!important;border-color:rgba(255,255,255,.23)!important}
+    .cta-band h2{color:#fff!important}.cta-band p{color:rgba(255,255,255,.78)!important}
+    footer{background:rgba(220,229,227,.74)!important;color:#526A72!important;border-color:rgba(23,76,100,.13)!important}
+    .footer-brand{color:var(--blue)!important}
+    .job-status{color:#267451!important;background:#E5F0E9!important}
+    .live-tag{color:#267451!important;background:#E5F0E9!important}
+    .score,.match-score .ring strong{color:#267451!important}
+
+    /* Orange is reserved for the 10%: primary conversion, progress and tiny cues. */
+    .btn-primary{background:var(--orange)!important;border-color:var(--orange)!important;color:#fff!important;box-shadow:0 7px 17px rgba(198,124,31,.16)!important}
+    .btn-primary:hover{background:var(--orange-deep)!important;box-shadow:0 9px 20px rgba(198,124,31,.21)!important}
+    .mini-cta{background:rgba(23,76,100,.09)!important;color:var(--blue)!important}
+    .lth-searchbox{
+      background:linear-gradient(135deg,rgba(241,239,232,.78),rgba(220,231,232,.62))!important;
+      border:1px solid rgba(255,255,255,.83)!important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.94),0 13px 32px rgba(23,54,66,.10)!important;
+    }
+    .lth-searchbox:focus-within{border-color:rgba(23,76,100,.35)!important;box-shadow:0 0 0 4px rgba(23,76,100,.07),0 15px 36px rgba(23,54,66,.12)!important}
+    .lth-searchbox>span{color:var(--blue)!important}
+    .lth-searchbox button{background:linear-gradient(135deg,#C67C1F,#B56D18)!important;box-shadow:0 6px 15px rgba(198,124,31,.18),inset 0 1px 0 rgba(255,255,255,.28)!important}
+    .lth-searchbox button:hover{background:linear-gradient(135deg,#B56D18,#9E5C12)!important}
+    .talent-search-stage{
+      background:linear-gradient(135deg,rgba(23,76,100,.16),rgba(23,76,100,.09))!important;
+      border-color:rgba(255,255,255,.59)!important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.38),0 25px 58px rgba(23,54,66,.15)!important;
+    }
+    .search-stage-overlay{background:linear-gradient(112deg,rgba(12,48,66,.60),rgba(23,76,100,.36) 54%,rgba(27,54,62,.24)),linear-gradient(0deg,rgba(9,35,49,.22),transparent 68%)!important}
+    .search-stage-vignette{background:linear-gradient(105deg,rgba(10,43,59,.14),rgba(23,76,100,.08) 54%,rgba(28,46,53,.08)),radial-gradient(ellipse at 50% 48%,transparent 8%,rgba(4,24,35,.10) 100%)!important}
+    .search-stage-center{background:linear-gradient(135deg,rgba(241,239,232,.20),rgba(220,231,232,.12))!important;border-color:rgba(255,255,255,.42)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.34),0 18px 46px rgba(3,25,37,.10)!important}
+    .search-stage-brand i,.search-stage-orbit span,.search-stage-orbit:before{background:var(--orange)!important;border-top-color:var(--orange)!important;box-shadow:0 0 0 4px rgba(198,124,31,.12)!important}
+    .search-stage-kicker{color:#F2D1A6!important}
+    .search-progress-track i{background:linear-gradient(90deg,#C67C1F,#E5B36F)!important;box-shadow:0 0 13px rgba(198,124,31,.24)!important}
+    .search-progress-meta strong,.search-stage-foot b{color:#F3D5AE!important}
+    .search-stage-query strong{color:#fff!important}
+    .talent-search-resultline,.talent-search-none{background:rgba(241,239,232,.94)!important;border-color:rgba(23,76,100,.14)!important}
+    .talent-search-resultline strong{color:var(--blue)!important}
+    .search-result-time{color:#8A6B43!important}
+
+    /* Avoid overusing accent color in small labels, icons and focus states. */
+    .navlinks a:hover,.text-link:hover,.section-kicker,.profile-overline,.top-match-label{color:var(--blue)!important}
+    .top-match-label{border-color:rgba(23,76,100,.15)!important}
+    .identity-divider{color:#8EA5AB!important}
+    .filter-group input[type=checkbox]{accent-color:var(--blue)!important}
+    .lth-searchbox:focus-within,.filter-group select:focus,.filter-group input:focus,.field input:focus,.field select:focus,.field textarea:focus{outline-color:var(--blue)!important}
+    .modal{background:rgba(241,239,232,.97)!important;color:var(--ink)!important;border-color:rgba(255,255,255,.92)!important}
+    .modal-head h3,.detail-top h3,.detail-section h4{color:var(--blue-deep)!important}
+    .empty{background:rgba(220,231,232,.62)!important;color:#526A72!important}
+    @media(max-width:760px){.topbar{background:rgba(233,230,222,.94)!important}}
+    @media(prefers-reduced-motion:reduce){.orbit{animation:none!important}}
+  </style>
+
 </head>
 <body>
   <div class="ambient-backdrop" aria-hidden="true"></div>
@@ -650,9 +1034,9 @@
           <div class="match-card">
             <div class="match-card-head"><strong>Matching overview</strong><span class="live-tag">MATCH ENGINE</span></div>
             <div class="role-chip">Employer opportunity</div><div class="role-title">Junior CAD Designer</div>
-            <div class="match-person"><div class="person-avatar">AM</div><div class="person-info"><strong>Alex M. <span style="color:var(--green);font-size:9px">● Available</span></strong><small>Revit · AutoCAD · 3D modelling</small></div><div class="score">99%<small>FIT SCORE</small></div></div>
-            <div class="match-person"><div class="person-avatar gold">CN</div><div class="person-info"><strong>Clarisse N.</strong><small>ArchiCAD · Revit · Technical drawing</small></div><div class="score">77%<small>FIT SCORE</small></div></div>
-            <div class="match-person"><div class="person-avatar sage">DK</div><div class="person-info"><strong>David K.</strong><small>AutoCAD · SolidWorks · Design</small></div><div class="score">72%<small>FIT SCORE</small></div></div>
+            <div class="match-person"><div class="person-avatar hero-person-photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSusER6zK9jxoLjXEMyMKQyJf9NnNqr_bVBU5kUuVD8-w&s=10" alt="Illustrative male professional portrait" referrerpolicy="no-referrer" onerror="this.remove()"></div><div class="person-info"><strong>Alex M. <span style="color:var(--green);font-size:9px">● Available</span></strong><small>Revit · AutoCAD · 3D modelling</small></div><div class="score">99%<small>FIT SCORE</small></div></div>
+            <div class="match-person"><div class="person-avatar hero-person-photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqOp6HZCcikUyjsDVWP8K2I3xQpISEOqerW6gZrvspcw&s=10" alt="Illustrative female professional portrait" referrerpolicy="no-referrer" onerror="this.remove()"></div><div class="person-info"><strong>Clarisse N.</strong><small>ArchiCAD · Revit · Technical drawing</small></div><div class="score">77%<small>FIT SCORE</small></div></div>
+            <div class="match-person"><div class="person-avatar hero-person-photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYUmzMPqZkivobLW0m-UnhNfDrrqt-wyenjyYWWoH3cw&s=10" alt="Illustrative male professional portrait" referrerpolicy="no-referrer" onerror="this.remove()"></div><div class="person-info"><strong>David K.</strong><small>AutoCAD · SolidWorks · Design</small></div><div class="score">72%<small>FIT SCORE</small></div></div>
             <div class="match-reason"><span>✓ Required skills</span><span>✓ Role alignment</span><span>✓ Location fit</span></div>
             <button class="mini-cta" onclick="scrollToWorkspace()">Explore the matching workspace →</button>
           </div>
@@ -680,7 +1064,7 @@
             <div class="talent-finder-intro">
               <div><span class="section-kicker">DESCRIBE YOUR HIRING NEED</span><strong>What type of employee are you looking for?</strong><small>Enter a role or skill, such as graphic designer, CAD technician or IT support.</small></div>
             </div>
-            <div class="results-toolbar"><select class="sort-select" id="matchJobSelect" aria-label="Choose vacancy to match against" onchange="setActiveJob(this.value)"></select><div class="searchbox"><span>⌕</span><input id="candidateSearch" type="search" placeholder="e.g. graphic designer, CAD technician…" aria-label="Describe the type of employee you need" oninput="findTalentAsYouType()" /></div><select class="sort-select" id="sortCandidates" onchange="renderCandidates()"><option value="match">Best match first</option><option value="experience">Most experienced</option><option value="name">Name A–Z</option></select></div>
+            <div class="results-toolbar"><select class="sort-select" id="matchJobSelect" aria-label="Choose vacancy to match against" onchange="setActiveJob(this.value)"></select><div class="searchbox lth-searchbox"><span aria-hidden="true">⌕</span><input id="candidateSearch" type="search" placeholder="Describe the person you want to hire…" aria-label="Describe the type of employee you need" autocomplete="off" oninput="resetTalentSearchInput()" onkeydown="if(event.key==='Enter'){event.preventDefault();findTalentAsYouType()}" /><button type="button" id="candidateSearchButton" onclick="findTalentAsYouType()">Search talent <b aria-hidden="true">↗</b></button></div><select class="sort-select" id="sortCandidates" onchange="renderCandidates()"><option value="match">Best match first</option><option value="experience">Most experienced</option><option value="name">Name A–Z</option></select></div>
             <div id="talentSearchStatus" class="talent-search-status" role="status" aria-live="polite" hidden></div>
             <div id="topMatchResult" class="top-match-result" hidden></div>
             <div class="result-count" id="candidateCount">Loading talent…</div>
@@ -747,7 +1131,7 @@
   <div class="modal-backdrop" id="jobModal" role="dialog" aria-modal="true" aria-labelledby="jobModalTitle" onclick="backdropClose(event,'jobModal')"><div class="modal"><div class="modal-head"><div><h3 id="jobModalTitle">Create an opportunity</h3><p>Tell the LTH talent pool who you need.</p></div><button class="close-modal" onclick="closeModal('jobModal')" aria-label="Close">×</button></div><form id="jobForm" onsubmit="saveJob(event)"><div class="form-grid"><div class="field"><label for="jobTitle">Job title *</label><input id="jobTitle" required placeholder="e.g. Junior Graphic Designer"></div><div class="field"><label for="jobCompany">Company *</label><input id="jobCompany" required placeholder="Your company name"></div><div class="field"><label for="jobCategory">Specialization *</label><select id="jobCategory" required><option value="">Choose a field</option><option>Technology & IT</option><option>Architecture & CAD</option><option>Design & Creative</option><option>Project Management</option><option>Languages</option></select></div><div class="field"><label for="jobLocation">Location *</label><select id="jobLocation" required><option>Kigali</option><option>Other Rwanda</option><option>Remote</option></select></div><div class="field"><label for="jobExperience">Experience required</label><select id="jobExperience"><option value="0">Entry level</option><option value="1">1–2 years</option><option value="3">3+ years</option></select></div><div class="field"><label for="jobType">Employment type</label><select id="jobType"><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Internship</option></select></div><div class="field full"><label for="jobSkills">Required skills * (comma-separated)</label><input id="jobSkills" required placeholder="e.g. Photoshop, Illustrator, branding"></div><div class="field full"><label for="jobDescription">What will this person do?</label><textarea id="jobDescription" placeholder="Describe the role, responsibilities and what success looks like…"></textarea></div><div class="field full"><label for="jobEmail">Application contact email</label><input id="jobEmail" type="email" placeholder="careers@company.com"></div></div><p class="form-note">This prototype stores opportunities in this browser only. Connect a database and employer verification before publishing real vacancies.</p><p class="form-error" id="jobError"></p><div class="modal-actions"><button type="button" class="btn btn-light" onclick="closeModal('jobModal')">Cancel</button><button class="btn btn-primary" type="submit">Publish opportunity ↗</button></div></form></div></div>
 
   <!-- Edit talent profile modal -->
-  <div class="modal-backdrop" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle" onclick="backdropClose(event,'profileModal')"><div class="modal"><div class="modal-head"><div><h3 id="profileModalTitle">Build your talent profile</h3><p>Help employers understand your strengths.</p></div><button class="close-modal" onclick="closeModal('profileModal')" aria-label="Close">×</button></div><form id="profileForm" onsubmit="saveProfile(event)"><div class="form-grid"><div class="field"><label for="profileName">Full name *</label><input id="profileName" required placeholder="Your name"></div><div class="field"><label for="profileTitle">Professional title *</label><input id="profileTitle" required placeholder="e.g. Junior Web Developer"></div><div class="field"><label for="profileLocation">Location</label><select id="profileLocation"><option>Kigali</option><option>Other Rwanda</option><option>Remote</option></select></div><div class="field"><label for="profileCategory">Specialization</label><select id="profileCategory"><option>Technology & IT</option><option>Architecture & CAD</option><option>Design & Creative</option><option>Project Management</option><option>Languages</option></select></div><div class="field"><label for="profileExperience">Experience</label><select id="profileExperience"><option value="0">Entry level</option><option value="1">1–2 years</option><option value="3">3+ years</option></select></div><div class="field full"><label for="profileSkills">Your skills * (comma-separated)</label><input id="profileSkills" required placeholder="e.g. HTML, CSS, Photoshop, English"></div><div class="field"><label for="profileLanguages">Languages</label><input id="profileLanguages" placeholder="English, Kinyarwanda"></div><div class="field"><label for="profileAvailability">Availability</label><select id="profileAvailability"><option>Available now</option><option>Available in 2 weeks</option><option>Currently employed</option></select></div><div class="field full"><label for="profileBio">A little about your work</label><textarea id="profileBio" placeholder="Tell employers what you have built, practised or are excited to do…"></textarea></div><div class="field full"><label style="display:flex;align-items:center;gap:9px;font-weight:600"><input id="profileDiscoverable" type="checkbox" checked style="width:15px;height:15px;accent-color:var(--orange)"> Make my profile discoverable to employers in this demo</label></div></div><p class="form-note">Your profile is saved locally in this prototype. A live service should add secure accounts, consent controls and verified portfolio links.</p><p class="form-error" id="profileError"></p><div class="modal-actions"><button type="button" class="btn btn-light" onclick="closeModal('profileModal')">Cancel</button><button class="btn btn-primary" type="submit">Save my profile ↗</button></div></form></div></div>
+  <div class="modal-backdrop" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle" onclick="backdropClose(event,'profileModal')"><div class="modal"><div class="modal-head"><div><h3 id="profileModalTitle">Build your talent profile</h3><p>Help employers understand your strengths.</p></div><button class="close-modal" onclick="closeModal('profileModal')" aria-label="Close">×</button></div><form id="profileForm" onsubmit="saveProfile(event)"><div class="form-grid"><div class="field"><label for="profileName">Full name *</label><input id="profileName" required placeholder="Your name"></div><div class="field"><label for="profileTitle">Professional title *</label><input id="profileTitle" required placeholder="e.g. Junior Web Developer"></div><div class="field"><label for="profileGender">Profile photo preference</label><select id="profileGender"><option value="female">Female portrait</option><option value="male">Male portrait</option><option value="unspecified">Prefer not to say</option></select></div><div class="field"><label for="profileLocation">Location</label><select id="profileLocation"><option>Kigali</option><option>Other Rwanda</option><option>Remote</option></select></div><div class="field"><label for="profileCategory">Specialization</label><select id="profileCategory"><option>Technology & IT</option><option>Architecture & CAD</option><option>Design & Creative</option><option>Project Management</option><option>Languages</option></select></div><div class="field"><label for="profileExperience">Experience</label><select id="profileExperience"><option value="0">Entry level</option><option value="1">1–2 years</option><option value="3">3+ years</option></select></div><div class="field full"><label for="profileSkills">Your skills * (comma-separated)</label><input id="profileSkills" required placeholder="e.g. HTML, CSS, Photoshop, English"></div><div class="field"><label for="profileLanguages">Languages</label><input id="profileLanguages" placeholder="English, Kinyarwanda"></div><div class="field"><label for="profileAvailability">Availability</label><select id="profileAvailability"><option>Available now</option><option>Available in 2 weeks</option><option>Currently employed</option></select></div><div class="field full"><label for="profileBio">A little about your work</label><textarea id="profileBio" placeholder="Tell employers what you have built, practised or are excited to do…"></textarea></div><div class="field full"><label style="display:flex;align-items:center;gap:9px;font-weight:600"><input id="profileDiscoverable" type="checkbox" checked style="width:15px;height:15px;accent-color:var(--orange)"> Make my profile discoverable to employers in this demo</label></div></div><p class="form-note">Your profile is saved locally in this prototype. A live service should add secure accounts, consent controls and verified portfolio links.</p><p class="form-error" id="profileError"></p><div class="modal-actions"><button type="button" class="btn btn-light" onclick="closeModal('profileModal')">Cancel</button><button class="btn btn-primary" type="submit">Save my profile ↗</button></div></form></div></div>
 
   <!-- Candidate details modal -->
   <div class="modal-backdrop" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="detailName" onclick="backdropClose(event,'detailModal')"><div class="modal"><div class="modal-head"><div><div class="section-kicker">TALENT PROFILE</div><p style="margin:2px 0">A closer look at the skills behind the score.</p></div><button class="close-modal" onclick="closeModal('detailModal')" aria-label="Close">×</button></div><div id="detailContent"></div><div class="modal-actions detail-modal-actions"><button class="btn btn-light" onclick="closeModal('detailModal')">Close</button><button class="btn btn-light" id="detailShortlistBtn">＋ Add to shortlist</button><button class="btn btn-primary" id="detailInterviewBtn">Request interview ↗</button></div></div></div>
@@ -783,14 +1167,14 @@
   <script>
     const STORAGE_KEY = 'lth_talent_demo_v1';
     const initialCandidates = [
-      {id:'c1',name:'Alex Mutesi',title:'Junior CAD Designer',category:'Architecture & CAD',location:'Kigali',experience:1,available:true,remote:true,skills:['Revit','AutoCAD','3D Modelling','Technical Drawing','English'],languages:['English','Kinyarwanda'],bio:'Practised architectural drafting and 3D modelling through hands-on training and personal projects. Interested in supporting design and construction teams.',initials:'AM',tone:'',portfolio:'Training projects available on request.'},
-      {id:'c2',name:'Clarisse Niyonzima',title:'Architectural Design Assistant',category:'Architecture & CAD',location:'Kigali',experience:2,available:true,remote:false,skills:['ArchiCAD','Revit','Technical Drawing','Lumion','English'],languages:['English','French','Kinyarwanda'],bio:'Detail-oriented design assistant with practical exposure to architectural software, technical drawings and presentation work.',initials:'CN',tone:'a2',portfolio:'Selected design exercises and visualisations.'},
-      {id:'c3',name:'David Kamanzi',title:'3D & Mechanical Design Technician',category:'Architecture & CAD',location:'Other Rwanda',experience:3,available:false,remote:true,skills:['SolidWorks','AutoCAD','3D Modelling','Project Planning'],languages:['English','Kinyarwanda'],bio:'Combines technical drawing with 3D modelling and a structured approach to project delivery.',initials:'DK',tone:'a3',portfolio:'Sample CAD and modelling work available.'},
-      {id:'c4',name:'Mireille Uwase',title:'Graphic & Brand Designer',category:'Design & Creative',location:'Kigali',experience:2,available:true,remote:true,skills:['Photoshop','Illustrator','Branding','Social Media Design','English'],languages:['English','French','Kinyarwanda'],bio:'Creative designer focused on clear visual communication, brand consistency and digital content.',initials:'MU',tone:'a4',portfolio:'Branding and social design samples available.'},
-      {id:'c5',name:'Eric Habimana',title:'IT Support & Web Assistant',category:'Technology & IT',location:'Kigali',experience:1,available:true,remote:false,skills:['HTML','CSS','JavaScript','IT Support','Microsoft Office','English'],languages:['English','Kinyarwanda'],bio:'Practical IT learner who enjoys troubleshooting, building responsive web pages and helping people solve technical problems.',initials:'EH',tone:'',portfolio:'Web practice projects available.'},
-      {id:'c6',name:'Aline Mukamana',title:'Project Coordination Assistant',category:'Project Management',location:'Kigali',experience:3,available:false,remote:true,skills:['Microsoft Project','Planning','Excel','Reporting','Communication'],languages:['English','French','Kinyarwanda'],bio:'Organised coordinator with experience supporting schedules, documentation, reporting and communication across teams.',initials:'AL',tone:'a2',portfolio:'Project schedule samples available.'},
-      {id:'c7',name:'Patrick Nkurunziza',title:'French & English Language Assistant',category:'Languages',location:'Other Rwanda',experience:1,available:true,remote:true,skills:['English','French','Translation','Communication','Customer Service'],languages:['English','French','Kinyarwanda'],bio:'Language-focused professional interested in customer communication, translation support and learning facilitation.',initials:'PN',tone:'a3',portfolio:'Writing and translation samples available.'},
-      {id:'c8',name:'Grace Ingabire',title:'Digital Content Designer',category:'Design & Creative',location:'Kigali',experience:0,available:true,remote:true,skills:['Photoshop','Illustrator','Canva','Social Media Design','English'],languages:['English','Kinyarwanda'],bio:'Emerging creative with hands-on design practice and an interest in helping organisations communicate online.',initials:'GI',tone:'a4',portfolio:'Student projects available.'}
+      {id:'c1',name:'Alex Mutesi',gender:'male',title:'Junior CAD Designer',category:'Architecture & CAD',location:'Kigali',experience:1,available:true,remote:true,skills:['Revit','AutoCAD','3D Modelling','Technical Drawing','English'],languages:['English','Kinyarwanda'],bio:'Practised architectural drafting and 3D modelling through hands-on training and personal projects. Interested in supporting design and construction teams.',initials:'AM',tone:'',portfolio:'Training projects available on request.'},
+      {id:'c2',name:'Clarisse Niyonzima',gender:'female',title:'Architectural Design Assistant',category:'Architecture & CAD',location:'Kigali',experience:2,available:true,remote:false,skills:['ArchiCAD','Revit','Technical Drawing','Lumion','English'],languages:['English','French','Kinyarwanda'],bio:'Detail-oriented design assistant with practical exposure to architectural software, technical drawings and presentation work.',initials:'CN',tone:'a2',portfolio:'Selected design exercises and visualisations.'},
+      {id:'c3',name:'David Kamanzi',gender:'male',title:'3D & Mechanical Design Technician',category:'Architecture & CAD',location:'Other Rwanda',experience:3,available:false,remote:true,skills:['SolidWorks','AutoCAD','3D Modelling','Project Planning'],languages:['English','Kinyarwanda'],bio:'Combines technical drawing with 3D modelling and a structured approach to project delivery.',initials:'DK',tone:'a3',portfolio:'Sample CAD and modelling work available.'},
+      {id:'c4',name:'Mireille Uwase',gender:'female',title:'Graphic & Brand Designer',category:'Design & Creative',location:'Kigali',experience:2,available:true,remote:true,skills:['Photoshop','Illustrator','Branding','Social Media Design','English'],languages:['English','French','Kinyarwanda'],bio:'Creative designer focused on clear visual communication, brand consistency and digital content.',initials:'MU',tone:'a4',portfolio:'Branding and social design samples available.'},
+      {id:'c5',name:'Eric Habimana',gender:'male',title:'IT Support & Web Assistant',category:'Technology & IT',location:'Kigali',experience:1,available:true,remote:false,skills:['HTML','CSS','JavaScript','IT Support','Microsoft Office','English'],languages:['English','Kinyarwanda'],bio:'Practical IT learner who enjoys troubleshooting, building responsive web pages and helping people solve technical problems.',initials:'EH',tone:'',portfolio:'Web practice projects available.'},
+      {id:'c6',name:'Aline Mukamana',gender:'female',title:'Project Coordination Assistant',category:'Project Management',location:'Kigali',experience:3,available:false,remote:true,skills:['Microsoft Project','Planning','Excel','Reporting','Communication'],languages:['English','French','Kinyarwanda'],bio:'Organised coordinator with experience supporting schedules, documentation, reporting and communication across teams.',initials:'AL',tone:'a2',portfolio:'Project schedule samples available.'},
+      {id:'c7',name:'Patrick Nkurunziza',gender:'male',title:'French & English Language Assistant',category:'Languages',location:'Other Rwanda',experience:1,available:true,remote:true,skills:['English','French','Translation','Communication','Customer Service'],languages:['English','French','Kinyarwanda'],bio:'Language-focused professional interested in customer communication, translation support and learning facilitation.',initials:'PN',tone:'a3',portfolio:'Writing and translation samples available.'},
+      {id:'c8',name:'Grace Ingabire',gender:'female',title:'Digital Content Designer',category:'Design & Creative',location:'Kigali',experience:0,available:true,remote:true,skills:['Photoshop','Illustrator','Canva','Social Media Design','English'],languages:['English','Kinyarwanda'],bio:'Emerging creative with hands-on design practice and an interest in helping organisations communicate online.',initials:'GI',tone:'a4',portfolio:'Student projects available.'}
     ];
     const initialJobs = [
       {id:'j1',title:'Junior CAD Designer',company:'BuildCraft Rwanda',category:'Architecture & CAD',location:'Kigali',experience:1,type:'Full-time',skills:['Revit','AutoCAD','3D Modelling','Technical Drawing'],description:'Support the design team with technical drawings, 3D models and project documentation.',email:'careers@example.com'},
@@ -800,10 +1184,51 @@
       {id:'j5',title:'Bilingual Customer Experience Associate',company:'Connect Rwanda',category:'Languages',location:'Remote',experience:0,type:'Full-time',skills:['English','French','Communication','Customer Service'],description:'Support customer conversations across English and French channels.',email:'people@example.com'}
     ];
     let state = loadState();let currentMode='employer';let activeDetailId=null;
-    function loadState(){try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');return{candidates:saved.candidates||initialCandidates,jobs:saved.jobs||initialJobs,activeJobId:saved.activeJobId||(saved.jobs?.[0]?.id||'j1'),shortlist:saved.shortlist||[],applications:saved.applications||[],interviewRequests:saved.interviewRequests||[],profile:saved.profile||{name:'Jordan M.',title:'Digital & Technology Professional',category:'Technology & IT',location:'Kigali',experience:1,skills:['Web design','Communication','English'],languages:['English','Kinyarwanda'],availability:'Available now',discoverable:true,bio:'A practical learner interested in digital work and new opportunities.'}}}catch(e){return{candidates:initialCandidates,jobs:initialJobs,activeJobId:'j1',shortlist:[],applications:[],interviewRequests:[],profile:{name:'Jordan M.',title:'Digital & Technology Professional',category:'Technology & IT',location:'Kigali',experience:1,skills:['Web design','Communication','English'],languages:['English','Kinyarwanda'],availability:'Available now',discoverable:true,bio:''}}}}
+    function loadState(){try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');return{candidates:saved.candidates||initialCandidates,jobs:saved.jobs||initialJobs,activeJobId:saved.activeJobId||(saved.jobs?.[0]?.id||'j1'),shortlist:saved.shortlist||[],applications:saved.applications||[],interviewRequests:saved.interviewRequests||[],profile:saved.profile||{name:'Jordan M.',gender:'male',title:'Digital & Technology Professional',category:'Technology & IT',location:'Kigali',experience:1,skills:['Web design','Communication','English'],languages:['English','Kinyarwanda'],availability:'Available now',discoverable:true,bio:'A practical learner interested in digital work and new opportunities.'}}}catch(e){return{candidates:initialCandidates,jobs:initialJobs,activeJobId:'j1',shortlist:[],applications:[],interviewRequests:[],profile:{name:'Jordan M.',gender:'male',title:'Digital & Technology Professional',category:'Technology & IT',location:'Kigali',experience:1,skills:['Web design','Communication','English'],languages:['English','Kinyarwanda'],availability:'Available now',discoverable:true,bio:''}}}}
     function persist(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}catch(e){showToast('Browser storage is unavailable in this session.')}}
     function norm(v){return String(v||'').toLowerCase().trim()}function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
     function scoreCandidate(c,job){const required=(job?.skills||[]).map(norm);const candidate=(c.skills||[]).map(norm);const matched=required.filter(s=>candidate.includes(s));const skill=required.length?matched.length/required.length:0.55;const expNeed=Number(job?.experience||0);const exp=c.experience>=expNeed?1:(c.experience+1)/(expNeed+1);const loc=job?.location==='Remote'?(c.remote?1:.7):(c.location===job?.location?1:(c.remote?.9:.55));const avail=c.available?1:.55;const langNeed=(job?.languages||[]).map(norm);const langs=(c.languages||[]).map(norm);const lang=langNeed.length?langNeed.filter(x=>langs.includes(x)).length/langNeed.length:(langs.includes('english')?.9:.65);const points={skills:Math.round(skill*45),experience:Math.round(exp*20),location:Math.round(loc*15),availability:Math.round(avail*10),languages:Math.round(lang*10)};const total=Object.values(points).reduce((a,b)=>a+b,0);return{total,matched,points}}
+    // Portraits supplied by LTH for this prototype. Keep the pools separate so
+    // female profiles always use the female set and male profiles the male set.
+    const femalePortraits = [
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqOp6HZCcikUyjsDVWP8K2I3xQpISEOqerW6gZrvspcw&s=10',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaJlJtFpri8F85R6c3HgPji4BfBVv-6alsJTgNihwQ6A&s=10',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrQTAeBosOn9lAqnNjEUxm_9Va_-SKQCBi-wxglBsiDw&s=10',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScF_CTEZBgNmnYN_ybPxsS3rN-WD7UCeAIj0g6JHxghQ&s=10',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LtD_R__UtFtNXFj3NfkRTV3iWZzgK0ZLZEetAopiQA&s=10',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa0BP8NdFn_GZWdZeUrTgM7tbbQr0N80GdnXth8Q9Naw&s=10'
+    ];
+    const malePortraits = [
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSusER6zK9jxoLjXEMyMKQyJf9NnNqr_bVBU5kUuVD8-w&s=10',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYUmzMPqZkivobLW0m-UnhNfDrrqt-wyenjyYWWoH3cw&s=10',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9o8pjN2-c_zSomzjXoxE6oN52JGROTo3n_KKpb1dEZQ&s=10',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzoxmJ75AE-95YTUG7-p5o52WwEGuTZH5Z69hSRtBt-A&s=10',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl4fsuLI_vn-liwKaR0peGA5NRkKabV5yYwgu2CPuS9A&s=10',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM5XfUcvAS3VyMmnhZAKy0s8ORoG2bW-wDt0vBS9Wa3g&s=10',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZvPEZWcV33_laZlW1p2CnE18lyV_sQhHhxwMoTq95jw&s=10',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgYjudvoKtFRSgLP68jmnm8MsHjmp_udv4qCWSXR9SnQ&s=10'
+    ];
+    const talentPortraits = {
+      c1:malePortraits[0], c2:femalePortraits[0],
+      c3:malePortraits[1], c4:femalePortraits[1],
+      c5:malePortraits[2], c6:femalePortraits[2],
+      c7:malePortraits[3], c8:femalePortraits[3]
+    };
+    function portraitUrl(candidate){
+      if(!candidate) return '';
+      // Fixed demo mappings take priority, keeping each displayed sample stable.
+      if(talentPortraits[candidate.id]) return talentPortraits[candidate.id];
+      const index=Array.from(String(candidate.name||'')).reduce((n,ch)=>n+ch.charCodeAt(0),0);
+      if(candidate.gender==='female') return femalePortraits[index%femalePortraits.length];
+      if(candidate.gender==='male') return malePortraits[index%malePortraits.length];
+      // Do not infer a portrait category when a real candidate has not chosen one.
+      return '';
+    }
+    function portraitMarkup(candidate,className='candidate-avatar'){
+      const initials=candidate.initials||candidate.name.split(/\s+/).map(x=>x[0]).join('').slice(0,2).toUpperCase();
+      const src=portraitUrl(candidate);
+      return `<div class="${className} portrait-frame ${src?'':'portrait-fallback'}" role="img" aria-label="Illustrative profile portrait for ${esc(candidate.name)}">${src?`<img src="${esc(src)}" alt="Illustrative portrait for ${esc(candidate.name)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.classList.add('portrait-fallback');this.remove()">`:''}<span>${esc(initials)}</span></div>`;
+    }
     function activeJob(){return state.jobs.find(j=>j.id===state.activeJobId)||state.jobs[0]||{skills:[],experience:0,location:'Kigali',languages:[]}}
     function renderJobOptions(){const el=document.getElementById('matchJobSelect');if(!el)return;el.innerHTML=state.jobs.map(j=>`<option value="${esc(j.id)}">${esc(j.title)}</option>`).join('');el.value=activeJob().id}
     function setActiveJob(id){if(!state.jobs.some(j=>j.id===id))return;state.activeJobId=id;persist();renderCandidates()}
@@ -832,7 +1257,37 @@
       for(const [pattern,aliases] of aliasRules){if(pattern.test(q)){for(const alias of aliases){if(title.includes(alias))score+=9;else if(skills.some(x=>x.includes(alias)))score+=7;else if(category.includes(alias))score+=3;}}}
       return score;
     }
-    function getFilteredCandidates(){const rawSearch=norm(document.getElementById('candidateSearch')?.value);const search=rawSearch.length>=2?rawSearch:'';const cat=document.getElementById('specialtyFilter')?.value||'';const location=document.getElementById('locationFilter')?.value||'';const avail=document.getElementById('availableFilter')?.checked;const remote=document.getElementById('remoteFilter')?.checked;const exp=document.getElementById('experienceFilter')?.value??'';const job=activeJob();let list=state.candidates.filter(c=>{if(search&&!candidateSearchScore(c,search))return false;if(cat&&c.category!==cat)return false;if(location==='Kigali'&&c.location!=='Kigali')return false;if(location==='Other Rwanda'&&c.location!=='Other Rwanda')return false;if(location==='Remote'&&!c.remote)return false;if(avail&&!c.available)return false;if(remote&&!c.remote)return false;if(exp!==''&&c.experience<Number(exp))return false;return true}).map(c=>({...c,match:scoreCandidate(c,job),searchScore:candidateSearchScore(c,search)}));const sort=document.getElementById('sortCandidates')?.value||'match';if(search)list.sort((a,b)=>b.searchScore-a.searchScore||b.match.total-a.match.total);else if(sort==='match')list.sort((a,b)=>b.match.total-a.match.total);else if(sort==='experience')list.sort((a,b)=>b.experience-a.experience);else if(sort==='name')list.sort((a,b)=>a.name.localeCompare(b.name));return list}
+    function getFilteredCandidates(){
+      const committedSearch=window.lthTalentSearchActivated?norm(window.lthTalentSearchQuery):'';
+      const search=committedSearch.length>=2?committedSearch:'';
+      const cat=document.getElementById('specialtyFilter')?.value||'';
+      const location=document.getElementById('locationFilter')?.value||'';
+      const avail=document.getElementById('availableFilter')?.checked;
+      const remote=document.getElementById('remoteFilter')?.checked;
+      const exp=document.getElementById('experienceFilter')?.value??'';
+      const job=activeJob();
+      const eligible=state.candidates.filter(c=>{
+        if(cat&&c.category!==cat)return false;
+        if(location==='Kigali'&&c.location!=='Kigali')return false;
+        if(location==='Other Rwanda'&&c.location!=='Other Rwanda')return false;
+        if(location==='Remote'&&!c.remote)return false;
+        if(avail&&!c.available)return false;
+        if(remote&&!c.remote)return false;
+        if(exp!==''&&c.experience<Number(exp))return false;
+        return true;
+      }).map(c=>({...c,match:scoreCandidate(c,job),searchScore:candidateSearchScore(c,search)}));
+      let list=search?eligible.filter(c=>c.searchScore>0):eligible;
+      let usedFallback=false;
+      // Still surface the closest available person instead of an empty result panel.
+      // The interface explicitly labels this as a closest-profile suggestion, not an exact match.
+      if(search&&!list.length&&eligible.length){list=eligible;usedFallback=true;}
+      const sort=document.getElementById('sortCandidates')?.value||'match';
+      if(search)list.sort((a,b)=>b.searchScore-a.searchScore||b.match.total-a.match.total);
+      else if(sort==='match')list.sort((a,b)=>b.match.total-a.match.total);
+      else if(sort==='experience')list.sort((a,b)=>b.experience-a.experience);
+      else if(sort==='name')list.sort((a,b)=>a.name.localeCompare(b.name));
+      return usedFallback?list.map(c=>({...c,searchFallback:true})):list;
+    }
     function renderTopTalentMatch(query){
       const spot=document.getElementById('topMatchResult');if(!spot)return;const q=norm(query);
       if(q.length<2){spot.hidden=true;spot.innerHTML='';return}
@@ -842,38 +1297,39 @@
       const available=c.available?'<span class="availability-dot"></span>Available now':'<span class="availability-dot unavailable"></span>Availability to confirm';
       const bio=c.bio||'This candidate has not added a profile summary yet. Review their practical skills and discuss relevant experience during an interview.';
       const initials=c.initials||c.name.split(' ').map(x=>x[0]).join('').slice(0,2);
+      const matchLabel=c.searchFallback?'CLOSEST AVAILABLE PROFILE':'YOUR STRONGEST TALENT MATCH';
       spot.hidden=false;
       spot.innerHTML=`<article class="top-match-card prominent-match-card">
-        <div class="top-match-label"><span>YOUR STRONGEST TALENT MATCH</span><span class="top-match-index">TOP RESULT · ${list.length} ${list.length===1?'PROFILE':'PROFILES'} FOUND</span></div>
+        <div class="top-match-label"><span>${matchLabel}</span><span class="top-match-index">TOP RESULT · ${list.length} ${list.length===1?'PROFILE':'PROFILES'} ${c.searchFallback?'AVAILABLE':'FOUND'}</span></div>
         <div class="prominent-profile-head">
-          <div class="prominent-avatar ${esc(c.tone||'')}">${esc(initials)}</div>
+          ${portraitMarkup(c,'prominent-avatar '+(c.tone||''))}
           <div class="prominent-identity"><span class="profile-overline">LTH TALENT PROFILE</span><h3>${esc(c.name)}</h3><p>${esc(c.title)} <span class="identity-divider">·</span> ${esc(c.category)}</p>
             <div class="top-match-meta"><span>⌖ ${esc(c.location)}</span><span>◷ ${c.experience===0?'Entry level':c.experience+' years experience'}</span><span>${available}</span></div>
           </div>
-          <div class="prominent-fit"><strong>${m.total}%</strong><span>ROLE FIT</span><small>Based on your search</small></div>
+          <div class="prominent-fit"><strong>${m.total}%</strong><span>VACANCY FIT</span><small>Against selected role</small></div>
         </div>
         <div class="prominent-profile-body">
           <section class="prominent-about"><span class="profile-overline">PROFILE OVERVIEW</span><p>${esc(bio)}</p><div class="prominent-facts"><span><b>Languages</b>${esc((c.languages||[]).join(', ')||'Not specified')}</span><span><b>Work preference</b>${c.remote?'Remote considered':'On-site / local'}</span><span><b>Availability</b>${c.available?'Available now':'Confirm with candidate'}</span></div></section>
-          <section class="prominent-skills"><span class="profile-overline">SKILLS & CAPABILITIES</span><div class="top-match-skills">${skillTags||'<span class="top-match-skill">Skills not added</span>'}</div><p class="top-match-explain">${m.matched.length?`${m.matched.length} relevant skills overlap with the selected vacancy.`:`This profile is relevant to “${esc(query)}”. Review the full profile to assess transferable skills.`} Matching scores are guidance, not a hiring decision.</p></section>
+          <section class="prominent-skills"><span class="profile-overline">SKILLS & CAPABILITIES</span><div class="top-match-skills">${skillTags||'<span class="top-match-skill">Skills not added</span>'}</div><p class="top-match-explain">${c.searchFallback?`No exact profile match for “${esc(query)}” is currently listed. This is the closest available profile in the filtered talent pool; review transferable skills before proceeding.`:(m.matched.length?`${m.matched.length} relevant skills overlap with the selected vacancy.`:`This profile is relevant to “${esc(query)}”. Review the full profile to assess transferable skills.`)} Matching scores are guidance, not a hiring decision.</p></section>
         </div>
         <div class="prominent-match-breakdown"><div><span>Skills</span><div class="fit-track"><i style="width:${Math.round(m.points.skills/45*100)}%"></i></div><b>${m.points.skills}/45</b></div><div><span>Experience</span><div class="fit-track"><i style="width:${Math.round(m.points.experience/20*100)}%"></i></div><b>${m.points.experience}/20</b></div><div><span>Location</span><div class="fit-track"><i style="width:${Math.round(m.points.location/15*100)}%"></i></div><b>${m.points.location}/15</b></div></div>
         <div class="prominent-actions"><button class="btn ${saved?'btn-shortlisted':'btn-light'}" onclick="toggleShortlist('${esc(c.id)}')">${saved?'✓ Shortlisted':'＋ Add to shortlist'}</button><button class="btn btn-light" onclick="showCandidate('${esc(c.id)}')">View full profile ↗</button><button class="btn btn-primary" onclick="openInterviewModal('${esc(c.id)}')">Request / schedule interview ↗</button></div>
       </article>`;
     }
-    function renderCandidates(){if(!document.getElementById('candidateList'))return;const list=getFilteredCandidates();const query=norm(document.getElementById('candidateSearch')?.value);const topId=query.length>=2&&list.length?list[0].id:null;document.getElementById('candidateCount').textContent=`${list.length} ${list.length===1?'profile':'profiles'} ${query.length>=2?'relevant to “'+query+'”':'available in the talent pool'} · ranked against ${activeJob().title||'your needs'}`;const remaining=topId?list.filter(c=>c.id!==topId):list;document.getElementById('candidateList').innerHTML=remaining.length?remaining.map(c=>{const m=c.match;const skillText=m.matched.length?`${m.matched.length} of ${(activeJob().skills||[]).length} key skills align`:'Explore transferable skills';return `<article class="candidate-card"><div class="candidate-main"><div class="candidate-avatar ${esc(c.tone||'')}">${esc(c.initials||c.name.split(' ').map(x=>x[0]).join('').slice(0,2))}</div><div class="candidate-info"><div class="candidate-name">${esc(c.name)}</div><div class="candidate-title">${esc(c.title)} · ${esc(c.category)}</div><div class="candidate-meta"><span>⌖ ${esc(c.location)}</span><span>◷ ${c.experience===0?'Entry level':c.experience+' yrs experience'}</span><span>${c.available?'● Available':'◷ Not immediately available'}</span></div></div><div class="match-score"><div class="ring" style="--deg:${m.total*3.6}deg"><strong>${m.total}%</strong></div><small>MATCH</small></div></div><div class="skill-row">${(c.skills||[]).slice(0,5).map(s=>`<span class="skill-tag ${m.matched.map(norm).includes(norm(s))?'matched':''}">${esc(s)}</span>`).join('')}</div><div class="candidate-footer"><div class="match-copy">${esc(skillText)} · ${m.points.experience}/20 experience fit</div><div class="candidate-actions"><button class="btn ${state.shortlist.includes(c.id)?'btn-shortlisted':'btn-light'} btn-small" title="${state.shortlist.includes(c.id)?'Remove from shortlist':'Add to shortlist'}" onclick="toggleShortlist('${c.id}')">${state.shortlist.includes(c.id)?'✓ Shortlisted':'＋ Shortlist'}</button><button class="btn btn-primary btn-small" onclick="showCandidate('${c.id}')">View profile ↗</button></div></div></article>`}).join(''):(topId?'':'<div class="empty">No matching employee profiles were found. Try a related role or broaden your filters.</div>');renderShortlist();if(!window.lthTalentSearchBusy)renderTopTalentMatch(query);}
+    function renderCandidates(){if(!document.getElementById('candidateList'))return;const list=getFilteredCandidates();const query=window.lthTalentSearchActivated?norm(window.lthTalentSearchQuery):'';const topId=query.length>=2&&list.length?list[0].id:null;const fallback=Boolean(list[0]?.searchFallback);document.getElementById('candidateCount').textContent=`${list.length} ${list.length===1?'profile':'profiles'} ${fallback?'in the current talent pool · closest available profile shown for “'+query+'”':(query.length>=2?'relevant to “'+query+'”':'available in the talent pool')} · ranked against ${activeJob().title||'your needs'}`;const remaining=topId?list.filter(c=>c.id!==topId):list;document.getElementById('candidateList').innerHTML=remaining.length?remaining.map(c=>{const m=c.match;const skillText=m.matched.length?`${m.matched.length} of ${(activeJob().skills||[]).length} key skills align`:'Explore transferable skills';return `<article class="candidate-card"><div class="candidate-main">${portraitMarkup(c,'candidate-avatar ' +(c.tone||''))}<div class="candidate-info"><div class="candidate-name">${esc(c.name)}</div><div class="candidate-title">${esc(c.title)} · ${esc(c.category)}</div><div class="candidate-meta"><span>⌖ ${esc(c.location)}</span><span>◷ ${c.experience===0?'Entry level':c.experience+' yrs experience'}</span><span>${c.available?'● Available':'◷ Not immediately available'}</span></div></div><div class="match-score"><div class="ring" style="--deg:${m.total*3.6}deg"><strong>${m.total}%</strong></div><small>MATCH</small></div></div><div class="skill-row">${(c.skills||[]).slice(0,5).map(s=>`<span class="skill-tag ${m.matched.map(norm).includes(norm(s))?'matched':''}">${esc(s)}</span>`).join('')}</div><div class="candidate-footer"><div class="match-copy">${esc(skillText)} · ${m.points.experience}/20 experience fit</div><div class="candidate-actions"><button class="btn ${state.shortlist.includes(c.id)?'btn-shortlisted':'btn-light'} btn-small" title="${state.shortlist.includes(c.id)?'Remove from shortlist':'Add to shortlist'}" onclick="toggleShortlist('${c.id}')">${state.shortlist.includes(c.id)?'✓ Shortlisted':'＋ Shortlist'}</button><button class="btn btn-primary btn-small" onclick="showCandidate('${c.id}')">View profile ↗</button></div></div></article>`}).join(''):(topId?'':'<div class="empty">No matching employee profiles were found. Try a related role or broaden your filters.</div>');renderShortlist();if(!window.lthTalentSearchBusy)renderTopTalentMatch(query);}
     function renderShortlist(){
       const box=document.getElementById('shortlistItems');if(!box)return;
       const people=state.shortlist.map(id=>state.candidates.find(c=>c.id===id)).filter(Boolean);
       const count=document.getElementById('shortlistCount');if(count)count.textContent=`${people.length} selected`;
       box.className=people.length?'shortlist-list':'shortlist-empty';
-      box.innerHTML=people.length?people.map(c=>`<div class="shortlist-person"><div class="tiny-avatar">${esc(c.initials||c.name.split(' ').map(x=>x[0]).join('').slice(0,2))}</div><div class="shortlist-person-copy"><strong>${esc(c.name)}</strong><small>${esc(c.title)}</small></div><div class="shortlist-actions"><button type="button" class="shortlist-mini" onclick="showCandidate('${esc(c.id)}')" title="View profile">View</button><button type="button" class="shortlist-mini interview-mini" onclick="openInterviewModal('${esc(c.id)}')" title="Request interview">Interview</button><button type="button" class="shortlist-remove" onclick="toggleShortlist('${esc(c.id)}')" title="Remove from shortlist" aria-label="Remove ${esc(c.name)}">×</button></div></div>`).join(''):'<div class="shortlist-empty-inner"><strong>No employees selected yet</strong><span>Choose “Add to shortlist” on a profile to keep promising candidates together.</span></div>';
+      box.innerHTML=people.length?people.map(c=>`<div class="shortlist-person">${portraitMarkup(c,'tiny-avatar')}<div class="shortlist-person-copy"><strong>${esc(c.name)}</strong><small>${esc(c.title)}</small></div><div class="shortlist-actions"><button type="button" class="shortlist-mini" onclick="showCandidate('${esc(c.id)}')" title="View profile">View</button><button type="button" class="shortlist-mini interview-mini" onclick="openInterviewModal('${esc(c.id)}')" title="Request interview">Interview</button><button type="button" class="shortlist-remove" onclick="toggleShortlist('${esc(c.id)}')" title="Remove from shortlist" aria-label="Remove ${esc(c.name)}">×</button></div></div>`).join(''):'<div class="shortlist-empty-inner"><strong>No employees selected yet</strong><span>Choose “Add to shortlist” on a profile to keep promising candidates together.</span></div>';
       renderInterviewActivity();
     }
     function toggleShortlist(id){state.shortlist=state.shortlist.includes(id)?state.shortlist.filter(x=>x!==id):[...state.shortlist,id];persist();renderCandidates();showToast(state.shortlist.includes(id)?'Added to your shortlist.':'Removed from your shortlist.');}
     function showCandidate(id){
       const c=state.candidates.find(x=>x.id===id);if(!c)return;activeDetailId=id;
       const m=scoreCandidate(c,activeJob()),matched=m.matched.map(norm),initials=c.initials||c.name.split(' ').map(x=>x[0]).join('').slice(0,2);
-      document.getElementById('detailContent').innerHTML=`<div class="detail-hero"><div class="detail-avatar ${esc(c.tone||'')}">${esc(initials)}</div><div class="detail-identity"><span class="profile-overline">LTH TALENT PROFILE</span><h3 id="detailName">${esc(c.name)}</h3><p>${esc(c.title)} · ${esc(c.category)}</p><div class="detail-meta"><span>⌖ ${esc(c.location)}</span><span>◷ ${c.experience===0?'Entry level':c.experience+' years experience'}</span><span>${c.available?'Available now':'Availability to confirm'}</span></div></div><div class="detail-score">${m.total}%<small>ROLE FIT</small></div></div>
+      document.getElementById('detailContent').innerHTML=`<div class="detail-hero">${portraitMarkup(c,'detail-avatar ' +(c.tone||''))}<div class="detail-identity"><span class="profile-overline">LTH TALENT PROFILE</span><h3 id="detailName">${esc(c.name)}</h3><p>${esc(c.title)} · ${esc(c.category)}</p><div class="detail-meta"><span>⌖ ${esc(c.location)}</span><span>◷ ${c.experience===0?'Entry level':c.experience+' years experience'}</span><span>${c.available?'Available now':'Availability to confirm'}</span></div></div><div class="detail-score">${m.total}%<small>ROLE FIT</small></div></div>
         <div class="detail-section"><h4>Professional overview</h4><p>${esc(c.bio||'This person has not added a profile summary yet.')}</p></div>
         <div class="detail-section"><h4>Skills & capabilities</h4><div class="profile-skills">${(c.skills||[]).map(skill=>`<span class="skill-tag ${matched.includes(norm(skill))?'matched':''}">${esc(skill)}</span>`).join('')}</div></div>
         <div class="detail-section"><h4>Match breakdown</h4><div class="why-list"><div class="why-item"><span>Skills alignment (${m.matched.length}/${(activeJob().skills||[]).length} role skills)</span><strong>${m.points.skills}/45</strong></div><div class="why-item"><span>Experience fit</span><strong>${m.points.experience}/20</strong></div><div class="why-item"><span>Location & work style</span><strong>${m.points.location}/15</strong></div><div class="why-item"><span>Availability</span><strong>${m.points.availability}/10</strong></div><div class="why-item"><span>Language fit</span><strong>${m.points.languages}/10</strong></div></div><p class="detail-caveat">The match score is a decision-support signal. Review the candidate’s work and speak with them before hiring.</p></div>
@@ -887,7 +1343,7 @@
     function applyForJob(id){const job=state.jobs.find(j=>j.id===id);if(!job)return;if(state.applications.includes(id)){showToast('You have already applied for this role.');return}state.applications.push(id);persist();renderTalent();showToast(`Application interest recorded for ${job.title}. Connect a backend to deliver it to the employer.`)}
     function setMode(mode){currentMode=mode;document.getElementById('employerView').style.display=mode==='employer'?'grid':'none';document.getElementById('talentView').style.display=mode==='talent'?'block':'none';document.getElementById('employerTab').classList.toggle('active',mode==='employer');document.getElementById('talentTab').classList.toggle('active',mode==='talent');if(mode==='employer')renderCandidates();else renderTalent()}
     function scrollToWorkspace(){document.getElementById('workspace').scrollIntoView({behavior:'smooth',block:'start'})}
-    function resetFilters(){['specialtyFilter','locationFilter','experienceFilter'].forEach(id=>document.getElementById(id).value='');['availableFilter','remoteFilter'].forEach(id=>document.getElementById(id).checked=false);document.getElementById('candidateSearch').value='';document.getElementById('sortCandidates').value='match';const status=document.getElementById('talentSearchStatus');if(status){status.hidden=true;status.innerHTML=''}const spotlight=document.getElementById('topMatchResult');if(spotlight)spotlight.hidden=true;window.lthTalentSearchBusy=false;renderCandidates()}
+    function resetFilters(){['specialtyFilter','locationFilter','experienceFilter'].forEach(id=>document.getElementById(id).value='');['availableFilter','remoteFilter'].forEach(id=>document.getElementById(id).checked=false);document.getElementById('candidateSearch').value='';document.getElementById('sortCandidates').value='match';if(window.resetTalentSearchInput)window.resetTalentSearchInput();const status=document.getElementById('talentSearchStatus');if(status){status.hidden=true;status.innerHTML=''}const spotlight=document.getElementById('topMatchResult');if(spotlight)spotlight.hidden=true;window.lthTalentSearchBusy=false;renderCandidates()}
     function openModal(id){document.getElementById(id).classList.add('show');document.body.style.overflow='hidden'}function closeModal(id){document.getElementById(id).classList.remove('show');document.body.style.overflow=''}function backdropClose(e,id){if(e.target.id===id)closeModal(id)}
     function localDateString(date){const d=date||new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
     function openInterviewModal(id){
@@ -940,9 +1396,9 @@
       box.innerHTML=requests.length?requests.slice(0,3).map(r=>`<div class="interview-activity-row"><div><strong>${esc(r.candidateName)}</strong><small>${esc(r.date)} · ${esc(r.time)}</small></div><button type="button" class="shortlist-mini" onclick="downloadInterviewIcs('${esc(r.id)}')">Calendar</button></div>`).join(''):'<p class="interview-activity-empty">Your scheduled interview plans will appear here.</p>';
     }
     function openJobModal(){document.getElementById('jobError').style.display='none';document.getElementById('jobForm').reset();openModal('jobModal')}
-    function openProfileModal(){const p=state.profile;document.getElementById('profileName').value=p.name||'';document.getElementById('profileTitle').value=p.title||'';document.getElementById('profileLocation').value=p.location||'Kigali';document.getElementById('profileCategory').value=p.category||'Technology & IT';document.getElementById('profileExperience').value=p.experience??0;document.getElementById('profileSkills').value=(p.skills||[]).join(', ');document.getElementById('profileLanguages').value=(p.languages||[]).join(', ');document.getElementById('profileAvailability').value=p.availability||'Available now';document.getElementById('profileBio').value=p.bio||'';document.getElementById('profileDiscoverable').checked=p.discoverable!==false;document.getElementById('profileError').style.display='none';openModal('profileModal')}
+    function openProfileModal(){const p=state.profile;document.getElementById('profileName').value=p.name||'';document.getElementById('profileTitle').value=p.title||'';document.getElementById('profileGender').value=p.gender||'unspecified';document.getElementById('profileLocation').value=p.location||'Kigali';document.getElementById('profileCategory').value=p.category||'Technology & IT';document.getElementById('profileExperience').value=p.experience??0;document.getElementById('profileSkills').value=(p.skills||[]).join(', ');document.getElementById('profileLanguages').value=(p.languages||[]).join(', ');document.getElementById('profileAvailability').value=p.availability||'Available now';document.getElementById('profileBio').value=p.bio||'';document.getElementById('profileDiscoverable').checked=p.discoverable!==false;document.getElementById('profileError').style.display='none';openModal('profileModal')}
     function saveJob(e){e.preventDefault();const skills=document.getElementById('jobSkills').value.split(',').map(x=>x.trim()).filter(Boolean);if(!skills.length){showFormError('jobError','Please add at least one skill.');return}const job={id:'j'+Date.now(),title:document.getElementById('jobTitle').value.trim(),company:document.getElementById('jobCompany').value.trim(),category:document.getElementById('jobCategory').value,location:document.getElementById('jobLocation').value,experience:Number(document.getElementById('jobExperience').value),type:document.getElementById('jobType').value,skills,description:document.getElementById('jobDescription').value.trim(),email:document.getElementById('jobEmail').value.trim()};state.jobs.unshift(job);state.activeJobId=job.id;persist();renderJobOptions();closeModal('jobModal');renderCandidates();if(currentMode==='talent')renderTalent();showToast('Opportunity added. Candidates have been re-ranked against the new role.');}
-    function saveProfile(e){e.preventDefault();const skills=document.getElementById('profileSkills').value.split(',').map(x=>x.trim()).filter(Boolean);if(!skills.length){showFormError('profileError','Please add at least one skill.');return}state.profile={name:document.getElementById('profileName').value.trim(),title:document.getElementById('profileTitle').value.trim(),location:document.getElementById('profileLocation').value,category:document.getElementById('profileCategory').value,experience:Number(document.getElementById('profileExperience').value),skills,languages:document.getElementById('profileLanguages').value.split(',').map(x=>x.trim()).filter(Boolean),availability:document.getElementById('profileAvailability').value,discoverable:document.getElementById('profileDiscoverable').checked,bio:document.getElementById('profileBio').value.trim()};const profileCandidate={id:'my-profile',name:state.profile.name,title:state.profile.title,category:state.profile.category,location:state.profile.location,experience:state.profile.experience,available:state.profile.availability==='Available now',remote:state.profile.location==='Remote',skills:state.profile.skills,languages:state.profile.languages,bio:state.profile.bio,initials:state.profile.name.split(/\s+/).map(x=>x[0]).join('').slice(0,2).toUpperCase(),tone:'a2',portfolio:'Portfolio link can be added when the live platform is connected.'};state.candidates=state.candidates.filter(c=>c.id!=='my-profile');if(state.profile.discoverable)state.candidates.push(profileCandidate);persist();closeModal('profileModal');renderTalent();renderCandidates();showToast(state.profile.discoverable?'Profile saved and added to the discoverable talent pool in this browser.':'Profile saved privately in this browser.');}
+    function saveProfile(e){e.preventDefault();const skills=document.getElementById('profileSkills').value.split(',').map(x=>x.trim()).filter(Boolean);if(!skills.length){showFormError('profileError','Please add at least one skill.');return}state.profile={name:document.getElementById('profileName').value.trim(),gender:document.getElementById('profileGender').value,title:document.getElementById('profileTitle').value.trim(),location:document.getElementById('profileLocation').value,category:document.getElementById('profileCategory').value,experience:Number(document.getElementById('profileExperience').value),skills,languages:document.getElementById('profileLanguages').value.split(',').map(x=>x.trim()).filter(Boolean),availability:document.getElementById('profileAvailability').value,discoverable:document.getElementById('profileDiscoverable').checked,bio:document.getElementById('profileBio').value.trim()};const profileCandidate={id:'my-profile',name:state.profile.name,gender:state.profile.gender,title:state.profile.title,category:state.profile.category,location:state.profile.location,experience:state.profile.experience,available:state.profile.availability==='Available now',remote:state.profile.location==='Remote',skills:state.profile.skills,languages:state.profile.languages,bio:state.profile.bio,initials:state.profile.name.split(/\s+/).map(x=>x[0]).join('').slice(0,2).toUpperCase(),tone:'a2',portfolio:'Portfolio link can be added when the live platform is connected.'};state.candidates=state.candidates.filter(c=>c.id!=='my-profile');if(state.profile.discoverable)state.candidates.push(profileCandidate);persist();closeModal('profileModal');renderTalent();renderCandidates();showToast(state.profile.discoverable?'Profile saved and added to the discoverable talent pool in this browser.':'Profile saved privately in this browser.');}
     function showFormError(id,msg){const el=document.getElementById(id);el.textContent=msg;el.style.display='block'}let toastTimer;function showToast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),3200)}
     document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.modal-backdrop.show').forEach(m=>closeModal(m.id))}});
     renderJobOptions();renderCandidates();renderTalent();renderInterviewActivity();
@@ -1177,43 +1633,151 @@
 
   <script id="lth-talent-search-experience">
     (() => {
+      const SEARCH_DURATION = 5000;
       let searchTimer = null;
+      let stageTimer = null;
+      let photoTimer = null;
       let searchSequence = 0;
       window.lthTalentSearchBusy = false;
+      window.lthTalentSearchActivated = false;
+      window.lthTalentSearchQuery = '';
+      const safeText = value => String(value || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+      const clearRunTimers = () => {
+        clearTimeout(searchTimer);
+        clearInterval(stageTimer);
+        clearInterval(photoTimer);
+      };
+      const restoreSearchButton = () => {
+        const button = document.getElementById('candidateSearchButton');
+        const input = document.getElementById('candidateSearch');
+        if(button){button.disabled=false;button.classList.remove('is-searching');button.innerHTML='Search talent <b aria-hidden="true">↗</b>';}
+        if(input)input.readOnly=false;
+      };
+      window.resetTalentSearchInput = function(){
+        clearRunTimers();
+        searchSequence++;
+        window.lthTalentSearchBusy = false;
+        window.lthTalentSearchActivated = false;
+        window.lthTalentSearchQuery = '';
+        restoreSearchButton();
+        const status=document.getElementById('talentSearchStatus');
+        const spotlight=document.getElementById('topMatchResult');
+        if(status){status.hidden=true;status.innerHTML='';}
+        if(spotlight){spotlight.hidden=true;spotlight.innerHTML='';}
+        const count=document.getElementById('candidateCount');
+        if(count)count.textContent='Explore the LTH talent pool';
+        const list=document.getElementById('candidateList');
+        if(list && typeof renderCandidates==='function')renderCandidates();
+      };
       window.findTalentAsYouType = function(){
         const input = document.getElementById('candidateSearch');
         const status = document.getElementById('talentSearchStatus');
         const spotlight = document.getElementById('topMatchResult');
         const count = document.getElementById('candidateCount');
         const list = document.getElementById('candidateList');
+        const button = document.getElementById('candidateSearchButton');
         if(!input || !status || !spotlight || !list) return;
         const query = input.value.trim();
-        clearTimeout(searchTimer);
-        const sequence = ++searchSequence;
         if(query.length < 2){
-          window.lthTalentSearchBusy = false;
-          status.hidden = true; status.innerHTML = '';
-          spotlight.hidden = true; spotlight.innerHTML = '';
-          if(typeof renderCandidates === 'function') renderCandidates();
+          if(typeof showToast==='function')showToast('Enter at least 2 characters to search for talent.');
+          input.focus();
           return;
         }
+        clearRunTimers();
+        const sequence = ++searchSequence;
+        window.lthTalentSearchActivated = true;
+        window.lthTalentSearchQuery = query;
         window.lthTalentSearchBusy = true;
-        spotlight.hidden = true; spotlight.innerHTML = '';
+        input.readOnly = true;
+        if(button){button.disabled=true;button.classList.add('is-searching');button.innerHTML='<span class="lth-search-button-spinner" aria-hidden="true"></span> Searching';}
+
+        const preview = typeof getFilteredCandidates === 'function' ? getFilteredCandidates() : [];
+        const allCandidates = (typeof state !== 'undefined' && Array.isArray(state.candidates)) ? state.candidates : preview;
+        const bestPortrait = preview[0] && typeof portraitUrl === 'function' ? portraitUrl(preview[0]) : '';
+        const photoPool = [...new Set([
+          bestPortrait,
+          ...(typeof femalePortraits!=='undefined'?femalePortraits:[]),
+          ...(typeof malePortraits!=='undefined'?malePortraits:[])
+        ].filter(Boolean))];
+        const firstPhoto = photoPool[0] || '';
+        const escapedQuery = safeText(query);
+        spotlight.hidden = true;
+        spotlight.innerHTML = '';
         status.hidden = false;
-        status.innerHTML = `<div class="talent-search-loading"><span class="talent-spinner" aria-hidden="true"></span><div><strong>Finding the right talent</strong><small>Reviewing skills, experience and role relevance for “${query.replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}”…</small></div></div>`;
-        if(count) count.textContent = 'Searching the LTH talent pool…';
-        list.innerHTML = '';
-        searchTimer = setTimeout(() => {
-          if(sequence !== searchSequence) return;
-          window.lthTalentSearchBusy = false;
-          if(typeof renderCandidates === 'function') renderCandidates();
-          const matches = typeof getFilteredCandidates === 'function' ? getFilteredCandidates() : [];
+        status.innerHTML = `
+          <div class="talent-search-stage">
+            <div class="search-stage-image search-stage-image-a is-active" id="searchStageImageA" aria-hidden="true" style="background-image:url('${firstPhoto}')"></div>
+            <div class="search-stage-image search-stage-image-b" id="searchStageImageB" aria-hidden="true"></div>
+            <div class="search-stage-vignette" aria-hidden="true"></div>
+            <div class="search-stage-content">
+              <div class="search-stage-top"><span class="search-stage-brand"><i></i>LTH TALENT INTELLIGENCE</span><span class="search-stage-live"><i></i>SECURE TALENT SCAN</span></div>
+              <div class="search-stage-center">
+                <div class="search-stage-orbit" aria-hidden="true"><span></span><i></i></div>
+                <p class="search-stage-kicker">PRECISION MATCHING · LTH TALENT POOL</p>
+                <h3>Finding the person behind the potential.</h3>
+                <p class="search-stage-query">Searching for <strong>“${escapedQuery}”</strong></p>
+                <div class="search-progress-track" role="progressbar" aria-label="Talent search progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="talentSearchProgress"></i></div>
+                <div class="search-progress-meta"><span id="talentSearchStep">Understanding your hiring brief</span><strong>05 <small>SECONDS</small></strong></div>
+              </div>
+              <div class="search-stage-foot"><span><b>01</b> SKILLS</span><span><b>02</b> EXPERIENCE</span><span><b>03</b> AVAILABILITY</span><span><b>04</b> BEST FIT</span></div>
+            </div>
+          </div>`;
+
+        const imageA=document.getElementById('searchStageImageA');
+        const imageB=document.getElementById('searchStageImageB');
+        let photoIndex=photoPool.length>1?1:0;
+        let activeLayer='a';
+        if(imageA && firstPhoto)imageA.style.backgroundImage=`url("${firstPhoto}")`;
+        if(imageB && photoPool.length>1)imageB.style.backgroundImage=`url("${photoPool[photoIndex]}")`;
+        // Warm the supplied portrait pool so transitions are less likely to flash empty.
+        photoPool.forEach(url=>{const img=new Image();img.decoding='async';img.src=url;});
+        const reducedMotion=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if(!reducedMotion && photoPool.length>1 && imageA && imageB){
+          photoTimer=setInterval(()=>{
+            if(sequence!==searchSequence)return;
+            photoIndex=(photoIndex+1)%photoPool.length;
+            const incoming=activeLayer==='a'?imageB:imageA;
+            const outgoing=activeLayer==='a'?imageA:imageB;
+            incoming.style.backgroundImage=`url("${photoPool[photoIndex]}")`;
+            incoming.classList.add('is-active');
+            outgoing.classList.remove('is-active');
+            activeLayer=activeLayer==='a'?'b':'a';
+          },760);
+        }
+        if(count)count.textContent='Searching the LTH talent pool…';
+        list.innerHTML='';
+        const steps=[
+          'Understanding your hiring brief',
+          'Comparing skills across the talent pool',
+          'Checking experience, location & availability',
+          'Ranking the strongest profiles'
+        ];
+        const started=Date.now();
+        stageTimer=setInterval(()=>{
+          if(sequence!==searchSequence)return;
+          const elapsed=Date.now()-started;
+          const percent=Math.min(99,Math.floor(elapsed/SEARCH_DURATION*100));
+          const index=Math.min(steps.length-1,Math.floor(elapsed/(SEARCH_DURATION/steps.length)));
+          const step=document.getElementById('talentSearchStep');
+          const track=document.querySelector('.search-progress-track');
+          if(step)step.textContent=steps[index];
+          if(track)track.setAttribute('aria-valuenow',String(percent));
+        },70);
+        searchTimer=setTimeout(()=>{
+          if(sequence!==searchSequence)return;
+          clearInterval(stageTimer);
+          clearInterval(photoTimer);
+          window.lthTalentSearchBusy=false;
+          restoreSearchButton();
+          if(typeof renderCandidates==='function')renderCandidates();
+          const matches=typeof getFilteredCandidates==='function'?getFilteredCandidates():[];
           if(matches.length){
-            status.innerHTML = `<div class="talent-search-complete"><span class="search-check">✓</span><span><strong>${matches.length} relevant ${matches.length===1?'profile':'profiles'} found</strong><small>Your closest match is shown first.</small></span></div>`;
-          } else {
-            status.innerHTML = `<div class="talent-search-none"><strong>No close profile found yet</strong><small>Try another title or a related skill.</small></div>`;
+            const fallback=Boolean(matches[0].searchFallback);
+            status.innerHTML=`<div class="talent-search-resultline"><span class="search-result-check">✓</span><span><strong>${fallback?'Closest available profile surfaced':`${matches.length} ${matches.length===1?'profile':'profiles'} ready to review`}</strong><small>${fallback?'No exact profile matched the wording. Review this person’s transferable skills.':'Your strongest match is now ready, with other suitable profiles ranked below.'}</small></span><span class="search-result-time">MATCH COMPLETE</span></div>`;
+          }else{
+            status.innerHTML='<div class="talent-search-none"><strong>No profiles are available under the selected filters.</strong><small>Clear one or more filters and search again.</small></div>';
           }
-        }, 980);
+        },SEARCH_DURATION);
       };
     })();
   </script>
